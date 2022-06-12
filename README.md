@@ -1,2 +1,0 @@
-# DUNP
-fakultet
