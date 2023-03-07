@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int main(){
     int broj;
     printf("unesite decimalan ceo broj: ");
