@@ -43,11 +43,6 @@ int main(){
         printf("%d.%s %s %s\n",i,Vozaci[i].prezime,Vozaci[i].ime,Vozaci[i].nazivTima);
         i++;
     }
-    // c = fgetc(vozaci);
-    // while(c != EOF){
-    //     fputc(c,trke);
-    //     c = fgetc(vozaci);
-    // }
     i = 1;
     Vozaci[i].daLiJeOdustao = true;
     while(!feof(trke)){
