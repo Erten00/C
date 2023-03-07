@@ -35,6 +35,7 @@ int main(){
         printf("greška1");
         exit(1);
     }
+    
     DISK diskovi[MAX];
     int i = 0;
     while(!feof(datoteka1)){
