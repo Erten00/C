@@ -8,5 +8,7 @@ int fakt(int a){
 
 }
 int main(){
-    printf("%d", fakt(5));
+    printf("%d", fakt(4));
 }
+
+// 8 * 8 7 6 5 4 3 2 1
