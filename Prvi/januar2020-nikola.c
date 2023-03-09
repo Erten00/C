@@ -10,12 +10,12 @@ prikazati dobijenu sumu .
 #include <stdbool.h>
 int main(){
     int maksimalnaSuma, suma = 0, broj;
+    bool flag = true;
     printf("unesite maksimalnu sumu :");
     scanf("%d", &maksimalnaSuma);
     printf("\n");
     while(suma < maksimalnaSuma){
         scanf("%d", &broj);
-        bool flag = true;
         for(int i = 2; i < broj; i++){
             if(broj % i == 0){
                 flag = false;
