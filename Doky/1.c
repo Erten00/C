@@ -44,7 +44,7 @@ int main(){
     printf("Vasi brojevi su:\n");
     for(i = 0;i < k;i++){
         if(broj / duzinaBroja == 0){
-            printf("%d,",pomocniNiz[i]);
+            printf("%d,",pomocniNiz[k]);
         }
     }
    
