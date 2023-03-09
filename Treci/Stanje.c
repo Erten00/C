@@ -19,5 +19,19 @@ typedef struct Stanje
     int BrojPacijenata;
     int GornjaVilica;
     int DonjaVilica;
+    int BrojZuba; // 0 oznacava nemanje zuba, 1  ima zub i zdrav je, 2 ima zub ali je kvaran
 
 };
+
+int main(){
+    FILE * stanje_datoteka = fopen ("stanje.txt", "r");
+    if(stanje_datoteka == NULL){
+        printf("greška pri otvaranju stanovi.txt");
+        exit(1);
+    }
+    FILE * intervencije_datoteka = fopen ("intervencija.txt", "r");
+    if(intervencije_datoteka == NULL){
+        printf("greška pri otvaanju slobnodni.txt");
+        exit(1);
+    }
+}
