@@ -34,6 +34,7 @@ void suma(int broj){
         broj /= 10;
         c++;
     }
+    
     printf("Suma parnih:%d\n",sumaParnih);
     printf("Suma neparnih:%d\n",sumaNeparnih);
     if(sumaParnih == sumaNeparnih){
