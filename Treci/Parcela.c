@@ -90,10 +90,5 @@ int main(){
         fprintf(datoteka,"%s ima povrsinu:%da\n",goreDesno.naziv,goreDesno.povrsina);
     }
     fclose(datoteka);
-
-
-
-  
-
     return 0;
 }
