@@ -24,14 +24,18 @@ typedef struct Stanje
 };
 
 int main(){
+
     FILE * stanje_datoteka = fopen ("stanje.txt", "r");
     if(stanje_datoteka == NULL){
-        printf("greška pri otvaranju stanovi.txt");
+        printf("greška pri otvaranju stajne.txt");
         exit(1);
     }
     FILE * intervencije_datoteka = fopen ("intervencija.txt", "r");
     if(intervencije_datoteka == NULL){
-        printf("greška pri otvaanju slobnodni.txt");
+        printf("greška pri otvaanju intervencija.txt");
         exit(1);
     }
+    while(!feof(stanje_datoteka)){
+        fscanf(stanje_datoteka, "%d %f %d %d %d",  &stanovi[i].broj_stana, &stanovi[i].povrsina, &stanovi[i].cena, &stanovi[i].broj_soba, &stanovi[i].je_li_slobodan)
+}
 }
