@@ -10,7 +10,6 @@
 
 #define SIZE 100
 
-#define SIZE 100
 void unos(int m,int n,int matrica[SIZE][SIZE]){
     int br = 1;
     for(int i = 0;i < m;i++){
