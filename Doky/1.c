@@ -3,6 +3,11 @@
 // broj čija je prva cifra veća od njegove poslednje cifre. Prikazati dobijenu sumu brojeva: Napomena: Nije dozvoljena
 // upotreba indeksiranih promenljivih. Korisnik pre unosa brojeva mora uneti broj N. Sumirati samo brojeve koji imaju N cifara
 
+#include<stdio.h>
+#include<stdlib.h>
+#include<stdbool.h>
+#include<string.h>
+
 int main(){
     int suma = 0;
     int n,i,j;
@@ -26,7 +31,7 @@ int main(){
         broj = broj * 10 + temp;
         }
         
-        pomocniNiz[i] = broj;
+        pomocniNiz[k] = broj;
        
     }
     for(i = 0; i < k; i++){
