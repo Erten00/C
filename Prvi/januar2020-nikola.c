@@ -1,5 +1,5 @@
 /* u programskom jeziku c napisati strukturu programa za sumiranje prostih brojeva.
-najprre uneti maksimalnu sumu a potom unositi cele brojeve . sumirati samo proste brojeve
+najpre uneti maksimalnu sumu a potom unositi cele brojeve . sumirati samo proste brojeve
 dok njihova suma ne postane veća od zadate maksimalne sume.  
 prikazati dobijenu sumu .
 */
