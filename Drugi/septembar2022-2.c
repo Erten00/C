@@ -5,6 +5,7 @@
 
 int maksimanoAutomobila(int cene[MAX], int n, int budzet){
     int min = cene[0], suma = 0, brojAutomobila = 0, index;
+    
     while(1){
         for(int i = 0; i < n; i++){
             if(cene[i] < min){
@@ -12,7 +13,9 @@ int maksimanoAutomobila(int cene[MAX], int n, int budzet){
                 index = i;
             }
         }
+
         suma += min;
+
         if(suma > budzet || n == 0){
            break;
         }else{
