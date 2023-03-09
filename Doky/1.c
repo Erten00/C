@@ -1,3 +1,4 @@
+
 // 1. Nacrtati strukturni dijagram toka algoritma i na programskom jeziku napisati strukturni program za sumiranje
 // celih pozitivnih N to cifrenih brojeva Brojevi se unose sa tastature redom, a sumiranje se vrši sve dok se ne unese
 // broj čija je prva cifra veća od njegove poslednje cifre. Prikazati dobijenu sumu brojeva: Napomena: Nije dozvoljena
