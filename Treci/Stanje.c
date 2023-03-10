@@ -48,7 +48,7 @@ int main() {
     }
     fclose(fp);
 
-    // generate report for each patient
+    // Izvestaj
     for (int i = 1; i <= num_patients; i++) {
         int total_teeth = 0, missing_teeth = 0, defective_teeth = 0;
         for (int j = 0; j < MAX_TEETH; j++) {
