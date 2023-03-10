@@ -69,7 +69,7 @@ int main() {
     // Izvestaj
     for (int i = 1; i <= BrojPacijenata; i++) {
         int UkupnoZuba = 0, NemaZub = 0, KvarniZub = 0;
-        
+
         for (int j = 0; j < MAX_ZUBA; j++) {
 
             int *Vilica = GornjaVilica;
@@ -82,8 +82,8 @@ int main() {
             }
             if (status == 0) {
                 NemaZub++;
-
-            } else if (status == 2) {
+                }
+ else if (status == 2) {
                 KvarniZub++;
             }
 
