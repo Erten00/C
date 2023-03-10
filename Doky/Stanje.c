@@ -33,7 +33,7 @@ int main() {
 
     // cita intervencije iz intervencije.txt i osvezava stanje zuba
     fp = fopen("intervencije.txt", "r");
-    while (fscanf(fp, "%d %d %c", &Pacijent, &Zub, &Invervencija) == 3) 
+    while (fscanf(fp, "%d %d %c", &Pacijent, &Zub, &Invervencija)) 
     {
         if (Zub < 0 || Zub >= MAX_ZUBA) {
             printf("Nevazeci broj zuba %d za pacijenta %d\n", Zub, Pacijent);
