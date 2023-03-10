@@ -15,7 +15,7 @@ int main() {
     int BrojPacijenata;
     int GornjaVilica[MAX_TEETH]
     int DonjaVilica[MAX_TEETH];
-    int patient_num, Zub;
+    int Pacijent, Zub;
     char Invervencija;
 
     // cita stanje.txt
@@ -31,14 +31,14 @@ int main() {
 
     // cita intervencije iz intervencije.txt i osvezava stanje zuba
     fp = fopen("intervencije.txt", "r");
-    while (fscanf(fp, "%d %d %c", &patient_num, &Zub, &Invervencija) == 3) 
+    while (fscanf(fp, "%d %d %c", &Pacijent, &Zub, &Invervencija) == 3) 
     {
         if (Zub < 0 || Zub >= MAX_TEETH) {
-            printf("Invalid tooth number %d for patient %d\n", Zub, patient_num);
+            printf("Invalid tooth number %d for patient %d\n", Zub, Pacijent);
             continue;
         }
-        if (patient_num < 1 || patient_num > BrojPacijenata) {
-            printf("Invalid patient number %d\n", patient_num);
+        if (Pacijent < 1 || Pacijent > BrojPacijenata) {
+            printf("Invalid patient number %d\n", Pacijent);
             continue;
         }
 
@@ -79,10 +79,10 @@ int main() {
             }
 
         }
-        printf("Patient %d:\n", i);
-        printf("Total teeth: %d\n", total_teeth);
-        printf("Missing teeth: %d\n", missing_teeth);
-        printf("Defective teeth: %d (%.2f%%)\n", defective_teeth,
+        printf("Pacijent %d:\n", i);
+        printf("Totalno zuba: %d\n", total_teeth);
+        printf("Broj nedostajucih zuba: %d\n", missing_teeth);
+        printf("Kvarni zubi: %d (%.2f%%)\n", defective_teeth,
                (float)defective_teeth / total_teeth * 100);
     }
 
