@@ -7,7 +7,7 @@ int main() {
     int num_patients
     int upper_jaw[MAX_TEETH]
     int lower_jaw[MAX_TEETH];
-    int patient_num, tooth_num;
+    int patient_num, Zub;
     char intervention;
 
     // cita stanje.txt
@@ -23,9 +23,9 @@ int main() {
 
     // cita intervencije iz intervencije.txt i osvezava stanje zuba
     fp = fopen("intervencije.txt", "r");
-    while (fscanf(fp, "%d %d %c", &patient_num, &tooth_num, &intervention) == 3) {
-        if (tooth_num < 0 || tooth_num >= MAX_TEETH) {
-            printf("Invalid tooth number %d for patient %d\n", tooth_num, patient_num);
+    while (fscanf(fp, "%d %d %c", &patient_num, &Zub, &intervention) == 3) {
+        if (Zub < 0 || Zub >= MAX_TEETH) {
+            printf("Invalid tooth number %d for patient %d\n", Zub, patient_num);
             continue;
         }
         if (patient_num < 1 || patient_num > num_patients) {
@@ -33,11 +33,11 @@ int main() {
             continue;
         }
         int *jaw = upper_jaw;
-        if (tooth_num >= MAX_TEETH / 2) {
+        if (Zub >= MAX_TEETH / 2) {
             jaw = lower_jaw;
-            tooth_num -= MAX_TEETH / 2;
+            Zub -= MAX_TEETH / 2;
         }
-        int *status = &jaw[tooth_num];
+        int *status = &jaw[Zub];
         if (intervention == 'P') {
             *status = 1;
         } else if (intervention == 'I') {
