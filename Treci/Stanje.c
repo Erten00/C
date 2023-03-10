@@ -11,7 +11,7 @@
 #include<stdlib.h>
 #include<stdbool.h>
 #include<string.h>
-
+ 
 #define SIZE 100
 
 typedef struct Stanje
@@ -19,7 +19,7 @@ typedef struct Stanje
     int BrojPacijenata;
     int GornjaVilica;
     int DonjaVilica;
-    int BrojZuba; // 0 oznacava nemanje zuba, 1  ima zub i zdrav je, 2 ima zub ali je kvaran
+    int StanjeZuba; // 0 oznacava nemanje zuba, 1  ima zub i zdrav je, 2 ima zub ali je kvaran
 
 };
 
