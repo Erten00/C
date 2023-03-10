@@ -12,7 +12,7 @@
 #define MAX_TEETH 32
 
 int main() {
-    int num_patients
+    int BrojPacijenata;
     int upper_jaw[MAX_TEETH]
     int lower_jaw[MAX_TEETH];
     int patient_num, Zub;
@@ -20,7 +20,7 @@ int main() {
 
     // cita stanje.txt
     FILE *fp = fopen("stanje.txt", "r");
-    fscanf(fp, "%d", &num_patients);
+    fscanf(fp, "%d", &BrojPacijenata);
     for (int i = 0; i < MAX_TEETH; i++) {
         fscanf(fp, "%d", &upper_jaw[i]);
     }
@@ -37,10 +37,11 @@ int main() {
             printf("Invalid tooth number %d for patient %d\n", Zub, patient_num);
             continue;
         }
-        if (patient_num < 1 || patient_num > num_patients) {
+        if (patient_num < 1 || patient_num > BrojPacijenata) {
             printf("Invalid patient number %d\n", patient_num);
             continue;
         }
+
         int *jaw = upper_jaw;
         if (Zub >= MAX_TEETH / 2) {
             jaw = lower_jaw;
@@ -54,13 +55,15 @@ int main() {
         } else {
             printf("Nevažeća vrsta intervencije '%c'\n", Invervencija);
         }
+
     }
     fclose(fp);
 
     // Izvestaj
-    for (int i = 1; i <= num_patients; i++) {
+    for (int i = 1; i <= BrojPacijenata; i++) {
         int total_teeth = 0, missing_teeth = 0, defective_teeth = 0;
         for (int j = 0; j < MAX_TEETH; j++) {
+
             int *jaw = upper_jaw;
             if (j >= MAX_TEETH / 2) {
                 jaw = lower_jaw;
@@ -74,6 +77,7 @@ int main() {
             } else if (status == 2) {
                 defective_teeth++;
             }
+
         }
         printf("Patient %d:\n", i);
         printf("Total teeth: %d\n", total_teeth);
