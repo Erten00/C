@@ -61,7 +61,7 @@ int main() {
 
     // Izvestaj
     for (int i = 1; i <= BrojPacijenata; i++) {
-        int total_teeth = 0, missing_teeth = 0, defective_teeth = 0;
+        int UkupnoZuba = 0, missing_teeth = 0, KvarniZub = 0;
         for (int j = 0; j < MAX_TEETH; j++) {
 
             int *jaw = GornjaVilica;
@@ -70,20 +70,20 @@ int main() {
             }
             int status = jaw[j];
             if (status != 0) {
-                total_teeth++;
+                UkupnoZuba++;
             }
             if (status == 0) {
                 missing_teeth++;
             } else if (status == 2) {
-                defective_teeth++;
+                KvarniZub++;
             }
 
         }
         printf("Pacijent %d:\n", i);
-        printf("Totalno zuba: %d\n", total_teeth);
+        printf("Ukupno zuba: %d\n", UkupnoZuba);
         printf("Broj nedostajucih zuba: %d\n", missing_teeth);
-        printf("Kvarni zubi: %d (%.2f%%)\n", defective_teeth,
-               (float)defective_teeth / total_teeth * 100);
+        printf("Kvarni zubi: %d (%.2f%%)\n", KvarniZub,
+               (float)KvarniZub / UkupnoZuba * 100);
     }
 
     return 0;
