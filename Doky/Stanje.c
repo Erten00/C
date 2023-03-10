@@ -83,7 +83,7 @@ int main() {
             if (status == 0) {
                 NemaZub++;
                 }
- else if (status == 2) {
+            else if (status == 2) {
                 KvarniZub++;
             }
 
