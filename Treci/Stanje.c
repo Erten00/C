@@ -8,23 +8,23 @@
 
 #include <stdio.h>
 
-#define MAX_PATIENTS 100
-#define MAX_TEETH 32
+#define MAX_PACIJENATA 100
+#define MAX_ZUBA 32
 
 int main() {
     int BrojPacijenata;
-    int GornjaVilica[MAX_TEETH]
-    int DonjaVilica[MAX_TEETH];
+    int GornjaVilica[MAX_ZUBA]
+    int DonjaVilica[MAX_ZUBA];
     int Pacijent, Zub;
     char Invervencija;
 
     // cita stanje.txt
     FILE *fp = fopen("stanje.txt", "r");
     fscanf(fp, "%d", &BrojPacijenata);
-    for (int i = 0; i < MAX_TEETH; i++) {
+    for (int i = 0; i < MAX_ZUBA; i++) {
         fscanf(fp, "%d", &GornjaVilica[i]);
     }
-    for (int i = 0; i < MAX_TEETH; i++) {
+    for (int i = 0; i < MAX_ZUBA; i++) {
         fscanf(fp, "%d", &DonjaVilica[i]);
     }
     fclose(fp);
@@ -33,7 +33,7 @@ int main() {
     fp = fopen("intervencije.txt", "r");
     while (fscanf(fp, "%d %d %c", &Pacijent, &Zub, &Invervencija) == 3) 
     {
-        if (Zub < 0 || Zub >= MAX_TEETH) {
+        if (Zub < 0 || Zub >= MAX_ZUBA) {
             printf("Invalid tooth number %d for patient %d\n", Zub, Pacijent);
             continue;
         }
@@ -44,9 +44,9 @@ int main() {
 
     // Deljenje zuba na gornju i doljnju vilicu
         int *jaw = GornjaVilica;
-        if (Zub >= MAX_TEETH / 2) {
+        if (Zub >= MAX_ZUBA / 2) {
             jaw = DonjaVilica;
-            Zub -= MAX_TEETH / 2;
+            Zub -= MAX_ZUBA / 2;
         }
 
     //
@@ -65,10 +65,10 @@ int main() {
     // Izvestaj
     for (int i = 1; i <= BrojPacijenata; i++) {
         int UkupnoZuba = 0, NemaZub = 0, KvarniZub = 0;
-        for (int j = 0; j < MAX_TEETH; j++) {
+        for (int j = 0; j < MAX_ZUBA; j++) {
 
             int *jaw = GornjaVilica;
-            if (j >= MAX_TEETH / 2) {
+            if (j >= MAX_ZUBA / 2) {
                 jaw = DonjaVilica;
             }
             int status = jaw[j];
