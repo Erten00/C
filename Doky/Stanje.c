@@ -2,7 +2,7 @@
 // Prvi red datoteke sadrži broj pacijenata[5], a zaim u po dva reda se nalate zatečeno stanje zuba. 
 // U prvoj vrsti se nalazi stanje gornje vilice a u drugoj vrsti stanje donje vilice. 
 // Ako je I-element u vrsti 0 onda znači da taj pacijent nema zub na-tom mestu, ako je 1 onda znači da ima zubi da je zdrav, a ako je 2 onda znači da ima zub ali je kvaran 
-// U drugoj datoteci intervencije.txt nalaze se podaci o izvršenim intervencijama (broj pacijenta, broj zuba, intrevencija (P-popravljen zub, I-izvadjen zub) 
+// U drugoj datoteci intervencije.txt nalaze se podaci o izvršenim intervencijama broj pacijenta, broj zuba, intrevencija (P-popravljen zub, I-izvadjen zub) 
 // Izvrsiti osvežavanje podataka u prvoj datoteci na osnovu podataka iz druge datoteke intrevencije.txt. 
 // Za svakog pacijenta prikazati stanje i pisati izveštaj koliko ukupno ima zuba, koliko ima kvarnih zuba i procenat kvarnih zuba u odnosu na ukupan broj zuba.
 
