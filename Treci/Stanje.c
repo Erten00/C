@@ -1,47 +1,77 @@
-// 3. Datoteka stanje.txt sadri podatke o zubima. 
-// Prvi red datoteke sadrži broj pacijenata, a zaim u po dva reda se nalate zatečeno stanje zuba. 
-// U prvoj vrsti se nalazi stanje gornje vilice a u drugoj vrsti stanje donje vilice. 
-// Ako je I-ti element u vrsti 0 onda znači da taj pacijent nema zub na I-tom mestu, ako je 1 onda znači da ima zubi i da je zdrav, a ako je 2 onda znači da ima zub ali je kvaran 
-// U drugoj datoteci intervencije.txt nalaze se podaci o izvršenim intervencijama (broj pacijenta, broj zuba, intrevencija (P-popravljen zub, I-izvadjen zub) 
-// Izvrsiti osvežavanje podataka u prvoj datoteci na osnovu podataka iz druge datoteke intrevencije.txt.
-// Za svakog pacijenta prikazati stanje i pisati izveštaj koliko ukupno ima zuba, koliko ima kvarnih zuba i procenat kvarnih zuba u odnosu na ukupan broj zuba.
+#include <stdio.h>
 
+#define MAX_PATIENTS 100
+#define MAX_TEETH 32
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<stdbool.h>
-#include<string.h>
- 
-#define SIZE 100
+int main() {
+    int num_patients
+    int upper_jaw[MAX_TEETH]
+    int lower_jaw[MAX_TEETH];
+    int patient_num, tooth_num;
+    char intervention;
 
-typedef struct Stanje
-{
-    int BrojPacijenata;
-    int GornjaVilica;
-    int DonjaVilica;
-    int StanjeZuba; // 0 oznacava nemanje zuba, 1  ima zub i zdrav je, 2 ima zub ali je kvaran
-
-};
-
-int main(){
-
-    FILE * stanje_datoteka = fopen ("stanje.txt", "r");
-    if(stanje_datoteka == NULL){
-        printf("greška pri otvaranju stajne.txt");
-        exit(1);
+    // cita stanje.txt
+    FILE *fp = fopen("stanje.txt", "r");
+    fscanf(fp, "%d", &num_patients);
+    for (int i = 0; i < MAX_TEETH; i++) {
+        fscanf(fp, "%d", &upper_jaw[i]);
     }
-    FILE * intervencije_datoteka = fopen ("intervencija.txt", "r");
-    if(intervencije_datoteka == NULL){
-        printf("greška pri otvaanju intervencija.txt");
-        exit(1);
+    for (int i = 0; i < MAX_TEETH; i++) {
+        fscanf(fp, "%d", &lower_jaw[i]);
     }
-    
-    char Popravljen;
-    char Izvadjen;
+    fclose(fp);
 
-    while(!feof(stanje_datoteka)){
-        fscanf(stanje_datoteka, "%d %d %d %d ",  &stanje[i].BrojPacijenata, &stanje[i].GornjaVilica, &stanje[i].DonjaVilica, &stanje[i].StanjeZuba)
-}
+    // cita intervencije iz intervencije.txt i osvezava stanje zuba
+    fp = fopen("intervencije.txt", "r");
+    while (fscanf(fp, "%d %d %c", &patient_num, &tooth_num, &intervention) == 3) {
+        if (tooth_num < 0 || tooth_num >= MAX_TEETH) {
+            printf("Invalid tooth number %d for patient %d\n", tooth_num, patient_num);
+            continue;
+        }
+        if (patient_num < 1 || patient_num > num_patients) {
+            printf("Invalid patient number %d\n", patient_num);
+            continue;
+        }
+        int *jaw = upper_jaw;
+        if (tooth_num >= MAX_TEETH / 2) {
+            jaw = lower_jaw;
+            tooth_num -= MAX_TEETH / 2;
+        }
+        int *status = &jaw[tooth_num];
+        if (intervention == 'P') {
+            *status = 1;
+        } else if (intervention == 'I') {
+            *status = 0;
+        } else {
+            printf("Invalid intervention type '%c'\n", intervention);
+        }
+    }
+    fclose(fp);
 
+    // generate report for each patient
+    for (int i = 1; i <= num_patients; i++) {
+        int total_teeth = 0, missing_teeth = 0, defective_teeth = 0;
+        for (int j = 0; j < MAX_TEETH; j++) {
+            int *jaw = upper_jaw;
+            if (j >= MAX_TEETH / 2) {
+                jaw = lower_jaw;
+            }
+            int status = jaw[j];
+            if (status != 0) {
+                total_teeth++;
+            }
+            if (status == 0) {
+                missing_teeth++;
+            } else if (status == 2) {
+                defective_teeth++;
+            }
+        }
+        printf("Patient %d:\n", i);
+        printf("Total teeth: %d\n", total_teeth);
+        printf("Missing teeth: %d\n", missing_teeth);
+        printf("Defective teeth: %d (%.2f%%)\n", defective_teeth,
+               (float)defective_teeth / total_teeth * 100);
+    }
 
+    return 0;
 }
