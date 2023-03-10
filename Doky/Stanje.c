@@ -25,7 +25,8 @@ int main() {
     {
         fscanf(fp, "%d", &GornjaVilica[i]);
     }
-    for (int i = 0; i < MAX_ZUBA; i++) {
+    for (int i = 0; i < MAX_ZUBA; i++) 
+    {
         fscanf(fp, "%d", &DonjaVilica[i]);
     }
     fclose(fp);
@@ -35,11 +36,11 @@ int main() {
     while (fscanf(fp, "%d %d %c", &Pacijent, &Zub, &Invervencija) == 3) 
     {
         if (Zub < 0 || Zub >= MAX_ZUBA) {
-            printf("Invalid tooth number %d for patient %d\n", Zub, Pacijent);
+            printf("Nevazeci broj zuba %d za pacijenta %d\n", Zub, Pacijent);
             continue;
         }
         if (Pacijent < 1 || Pacijent > BrojPacijenata) {
-            printf("Invalid patient number %d\n", Pacijent);
+            printf("Nevazeci broj pacijenta %d\n", Pacijent);
             continue;
         }
 
