@@ -43,14 +43,14 @@ int main() {
         }
 
     // Deljenje zuba na gornju i doljnju vilicu
-        int *jaw = GornjaVilica;
+        int *Vilica = GornjaVilica;
         if (Zub >= MAX_ZUBA / 2) {
-            jaw = DonjaVilica;
+            Vilica = DonjaVilica;
             Zub -= MAX_ZUBA / 2;
         }
 
-    //
-        int *status = &jaw[Zub];
+    //Proverava stanje zuba
+        int *status = &Vilica[Zub];
         if (Invervencija == 'P') {
             *status = 1;
         } else if (Invervencija == 'I') {
@@ -67,11 +67,11 @@ int main() {
         int UkupnoZuba = 0, NemaZub = 0, KvarniZub = 0;
         for (int j = 0; j < MAX_ZUBA; j++) {
 
-            int *jaw = GornjaVilica;
+            int *Vilica = GornjaVilica;
             if (j >= MAX_ZUBA / 2) {
-                jaw = DonjaVilica;
+                Vilica = DonjaVilica;
             }
-            int status = jaw[j];
+            int status = Vilica[j];
             if (status != 0) {
                 UkupnoZuba++;
             }
