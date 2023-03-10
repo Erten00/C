@@ -13,8 +13,8 @@
 
 int main() {
     int BrojPacijenata;
-    int upper_jaw[MAX_TEETH]
-    int lower_jaw[MAX_TEETH];
+    int GornjaVilica[MAX_TEETH]
+    int DonjaVilica[MAX_TEETH];
     int patient_num, Zub;
     char Invervencija;
 
@@ -22,10 +22,10 @@ int main() {
     FILE *fp = fopen("stanje.txt", "r");
     fscanf(fp, "%d", &BrojPacijenata);
     for (int i = 0; i < MAX_TEETH; i++) {
-        fscanf(fp, "%d", &upper_jaw[i]);
+        fscanf(fp, "%d", &GornjaVilica[i]);
     }
     for (int i = 0; i < MAX_TEETH; i++) {
-        fscanf(fp, "%d", &lower_jaw[i]);
+        fscanf(fp, "%d", &DonjaVilica[i]);
     }
     fclose(fp);
 
@@ -42,9 +42,9 @@ int main() {
             continue;
         }
 
-        int *jaw = upper_jaw;
+        int *jaw = GornjaVilica;
         if (Zub >= MAX_TEETH / 2) {
-            jaw = lower_jaw;
+            jaw = DonjaVilica;
             Zub -= MAX_TEETH / 2;
         }
         int *status = &jaw[Zub];
@@ -64,9 +64,9 @@ int main() {
         int total_teeth = 0, missing_teeth = 0, defective_teeth = 0;
         for (int j = 0; j < MAX_TEETH; j++) {
 
-            int *jaw = upper_jaw;
+            int *jaw = GornjaVilica;
             if (j >= MAX_TEETH / 2) {
-                jaw = lower_jaw;
+                jaw = DonjaVilica;
             }
             int status = jaw[j];
             if (status != 0) {
