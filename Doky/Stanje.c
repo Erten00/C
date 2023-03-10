@@ -21,7 +21,8 @@ int main() {
     // cita stanje.txt
     FILE *fp = fopen("stanje.txt", "r");
     fscanf(fp, "%d", &BrojPacijenata);
-    for (int i = 0; i < MAX_ZUBA; i++) {
+    for (int i = 0; i < MAX_ZUBA; i++) 
+    {
         fscanf(fp, "%d", &GornjaVilica[i]);
     }
     for (int i = 0; i < MAX_ZUBA; i++) {
@@ -77,7 +78,7 @@ int main() {
             }
             if (status == 0) {
                 NemaZub++;
-                
+
             } else if (status == 2) {
                 KvarniZub++;
             }
