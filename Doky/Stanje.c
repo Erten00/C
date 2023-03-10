@@ -53,12 +53,10 @@ int main() {
 
     //Proverava stanje zuba
         int *status = &Vilica[Zub];
-        if (Invervencija == 'P') 
-        {
+        if (Invervencija == 'P') {
             *status = 1;
         } 
-        else if (Invervencija == 'I') 
-        {
+        else if (Invervencija == 'I') {
             *status = 0;
         } 
         else {
