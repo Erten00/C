@@ -76,7 +76,7 @@ int main() {
     Ispis(mat);
     // Simulirajte 3 koraka kvarenja
     for (int i = 1; i <= 3; i++) {
-        printf("State after step %d:\n", i);
+        printf("Stanje za korakom %d:\n", i);
         simulate(mat);
         Ispis(mat);
     }
