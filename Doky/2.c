@@ -23,7 +23,7 @@ void Ispis(int mat[M][N]) {
     }
 }
 
-// Function to simulate the neighbor corruption for one step
+// Funkcija za simulaciju pokvarenih suseda za jedan korak
 void simulate(int mat[M][N]) {
     int new_mat[M][N];
     for (int i = 0; i < M; i++) {
@@ -55,7 +55,6 @@ void simulate(int mat[M][N]) {
             }
         }
     }
-
     // Kopira novu matricu nazad u originalnu
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
