@@ -7,3 +7,7 @@
 // U glavnom programu prikazati pocetno stanje gajbice sa narandzama.
 // Pomoću kreirane funkcije simulirati 3 koraka kvarenja narandži i prikazati krajnje stanje.
 // Napomena: Za maksimalan broj poena alocirati memoriju dinamički.
+
+#include <stdio.h>
+#include <stdlib.h>
+
