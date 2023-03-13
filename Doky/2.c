@@ -14,7 +14,7 @@
 #define N 10
 
 // Ispis Matrice
-void display(int mat[M][N]) {
+void Ispis(int mat[M][N]) {
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
             printf("%d ", mat[i][j]);
@@ -29,9 +29,9 @@ void simulate(int mat[M][N]) {
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
             if (mat[i][j] == 2) {
-                new_mat[i][j] = 2; // Broken oranges stay broken
+                new_mat[i][j] = 2; // Pokvarena pomorandza ostaje pokvarena
             } else if (mat[i][j] == 1) {
-                // Check neighbors for corruption
+                // Proverava da li su susedi pokvareni
                 int corrupt = 0;
                 if (i > 0 && mat[i-1][j] == 2) {
                     corrupt = 1;
@@ -46,12 +46,12 @@ void simulate(int mat[M][N]) {
                     corrupt = 1;
                 }
                 if (corrupt) {
-                    new_mat[i][j] = 2; // Orange is now broken
+                    new_mat[i][j] = 2; // Narandza postaje pokvarena
                 } else {
-                    new_mat[i][j] = 1; // Orange stays fresh
+                    new_mat[i][j] = 1; // Narandza ostaje sveza
                 }
             } else {
-                new_mat[i][j] = 0; // Empty crate stays empty
+                new_mat[i][j] = 0; // Prazno mesto ostaje prazno
             }
         }
     }
@@ -65,21 +65,20 @@ void simulate(int mat[M][N]) {
 
 int main() {
     int mat[M][N];
-    // Read in matrix
-    printf("Enter the initial state of the crate:\n");
+    printf("Enter the pocetno stanje of the crate:\n");
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
             scanf("%d", &mat[i][j]);
         }
     }
-    // Display initial state
-    printf("Initial state:\n");
-    display(mat);
+    // Ispisuje pocetno stanje
+    printf("Pocetno stanje:\n");
+    Ispis(mat);
     // Simulate 3 steps of spoilage
     for (int i = 1; i <= 3; i++) {
         printf("State after step %d:\n", i);
         simulate(mat);
-        display(mat);
+        Ispis(mat);
     }
     return 0;
 }
