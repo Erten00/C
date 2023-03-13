@@ -9,26 +9,77 @@
 // Napomena: Za maksimalan broj poena alocirati memoriju dinamički.
 
 #include <stdio.h>
-#include <stdlib.h>
 
+#define M 10
+#define N 10
 
-// Unos Matrice
-void Unos(int matrix[SIZE][SIZE],int m,int n){
-    int i,j;
-     for(i = 0; i < n; i++){
-        for(j = 0; j < m; j++){
-            scanf("%d",&matrix[i][j]);
+// Ispis Matrice
+void display(int mat[M][N]) {
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+// Function to simulate the neighbor corruption for one step
+void simulate(int mat[M][N]) {
+    int new_mat[M][N];
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            if (mat[i][j] == 2) {
+                new_mat[i][j] = 2; // Broken oranges stay broken
+            } else if (mat[i][j] == 1) {
+                // Check neighbors for corruption
+                int corrupt = 0;
+                if (i > 0 && mat[i-1][j] == 2) {
+                    corrupt = 1;
+                }
+                if (i < M-1 && mat[i+1][j] == 2) {
+                    corrupt = 1;
+                }
+                if (j > 0 && mat[i][j-1] == 2) {
+                    corrupt = 1;
+                }
+                if (j < N-1 && mat[i][j+1] == 2) {
+                    corrupt = 1;
+                }
+                if (corrupt) {
+                    new_mat[i][j] = 2; // Orange is now broken
+                } else {
+                    new_mat[i][j] = 1; // Orange stays fresh
+                }
+            } else {
+                new_mat[i][j] = 0; // Empty crate stays empty
+            }
+        }
+    }
+    // Copy new matrix back to original matrix
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            mat[i][j] = new_mat[i][j];
         }
     }
 }
 
-// Ispis Matrice
-void Ispis(int matrix[SIZE][SIZE],int m,int n){
-    int i,j;
-     for(i = 0; i < n; i++){
-        for(j = 0; j < m; j++){
-            printf("%d ",matrix[i][j]);
+int main() {
+    int mat[M][N];
+    // Read in matrix
+    printf("Enter the initial state of the crate:\n");
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            scanf("%d", &mat[i][j]);
         }
-        printf("\n");
     }
+    // Display initial state
+    printf("Initial state:\n");
+    display(mat);
+    // Simulate 3 steps of spoilage
+    for (int i = 1; i <= 3; i++) {
+        printf("State after step %d:\n", i);
+        simulate(mat);
+        display(mat);
+    }
+    return 0;
 }
