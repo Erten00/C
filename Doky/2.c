@@ -55,7 +55,8 @@ void simulate(int mat[M][N]) {
             }
         }
     }
-    // Copy new matrix back to original matrix
+
+    // Kopira novu matricu nazad u originalnu
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
             mat[i][j] = new_mat[i][j];
@@ -65,7 +66,7 @@ void simulate(int mat[M][N]) {
 
 int main() {
     int mat[M][N];
-    printf("Enter the pocetno stanje of the crate:\n");
+    printf("Unesite pocetno stanje gajbice:\n");
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
             scanf("%d", &mat[i][j]);
@@ -74,7 +75,7 @@ int main() {
     // Ispisuje pocetno stanje
     printf("Pocetno stanje:\n");
     Ispis(mat);
-    // Simulate 3 steps of spoilage
+    // Simulirajte 3 koraka kvarenja
     for (int i = 1; i <= 3; i++) {
         printf("State after step %d:\n", i);
         simulate(mat);
