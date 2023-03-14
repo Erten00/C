@@ -8,33 +8,32 @@
 // Broj 325 ima dve magične cifre, cifru 2 koja se nalazi na drugoj poziciji
 // i cifru 3 koja se nalazi na trećoj poziciji.
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int main(){
-    int magicniBroj;
+    int n;
     while(1){
-        bool flag = false;
-        printf("Unsite magicni broj:");
-        scanf("%d",&magicniBroj);
-        int temp = magicniBroj;
+        int modul = 10;
+        int delilac = 1;
+        scanf("%d", &n);
         int i = 1;
-        while(temp != 0){
-            if(temp % 10 == i){
-                if(flag == false){
-                    printf("broj %d ima magične cifre : %d ", magicniBroj, i);
-                    flag = true;
-                }
-                else{
-                    printf("%d ", i);
-                }
+        int cifra;
+        int brojImaMagicnuCifru = 0; 
+        while(1){
+            cifra = n % modul / delilac;
+            modul = modul * 10;
+            delilac = delilac * 10;
+            if(cifra == i){
+                printf("%d ", cifra);
+                brojImaMagicnuCifru = 1;
             }
-            temp /= 10;
             i++;
+            if(n / delilac  == 0){
+                break;
+            }
         }
-        printf("\n");
-        if(!flag){
+        if(brojImaMagicnuCifru == 0){
             break;
         }
     }
