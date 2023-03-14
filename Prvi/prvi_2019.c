@@ -1,5 +1,6 @@
 /* Ispisati koliko je brojeva intervala(a,b) deljivo sa svojim ciframa (ne uzimajuci u obzir svoju cifru)
-prilikom unosa voditi racuna da je a<b*/
+prilikom unosa voditi racuna da je a<b
+*/
 
 #include<stdio.h>
 int main(){
