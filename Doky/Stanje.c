@@ -13,7 +13,7 @@
 
 int main() {
     int BrojPacijenata;
-    int GornjaVilica[MAX_ZUBA]
+    int GornjaVilica[MAX_ZUBA];
     int DonjaVilica[MAX_ZUBA];
     int Pacijent, Zub;
     char Invervencija;
