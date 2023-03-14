@@ -30,13 +30,6 @@ int main(){
         lnx += pow((-1),n-1) * pow((x-1),n) / n;
     }
 }
-
-printf("Lnx je:%d",lnx);
-    
-        
-        
-    
-    
-
+    printf("Lnx je:%d",lnx);
     return 0;
 }
