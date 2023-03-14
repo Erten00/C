@@ -12,9 +12,9 @@
 
 int main(){
     int n, niz[MAX];
+    bool imaRazlitice = false;
     printf("Unesite prirodan broj n");
     scanf("%d", &n);
-    bool imaRazlitice = false;
     do{
         printf("Unesite bar 2 različita broja:");
         for(int i = 0; i < n; i++){
