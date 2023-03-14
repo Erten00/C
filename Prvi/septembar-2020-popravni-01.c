@@ -2,7 +2,7 @@
 
 OSNOVI PROGRAMIRANIA
 
-1. Sa ulaza se učitavajo prirodni brojevi ai b. Napisati program kojim se ispituju svi prirodne broje ir nervate
+1. Sa ulaza se učitavajo prirodni brojevi a i b. Napisati program kojim se ispituju svi prirodne broje ir nervate
 
 Ja,b) koji su deljivi svim svojim ciframa, ne uzimajući u obzir poslednju citru
 

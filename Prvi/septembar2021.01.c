@@ -1,5 +1,5 @@
 // 1. Sa tastature se učitava prirodan broj n,
-//i zatim n prirodnih brojeva među kojima su bar dva različita.
+// i zatim n prirodnih brojeva među kojima su bar dva različita.
 // Napisati program koji jednim prolaskom kroz niz određuje drugu po veličini vrednost.
 // Na primer za pet brojeva 6, 6, 7, 6, 2 ispisuje: Druga po veličini vrednost je 6.
 
