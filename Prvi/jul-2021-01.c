@@ -42,16 +42,11 @@ void suma(int broj){
     }
 }
 
-
-
 int main(){
     int broj;
     printf("Unesite broj:");
     scanf("%d",&broj);
     suma(broj);
-     
-
-
     return 0;
 }
 
