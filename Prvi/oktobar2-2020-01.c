@@ -1,8 +1,6 @@
-\
-1. Sastaviti program koji će učitati dva broja min. Oha broja treba da budu prirodna.
-Ak taj uslov nije ispinjen, učitavanje treba ponoviti. Ako je om, zameniti na sa n.ž
-Nači i ispisati sumu kvadratnih Korena svih neparnih brojeva od m do n
-\
+// 1. Sastaviti program koji će učitati dva broja min. Oha broja treba da budu prirodna.
+// Ak taj uslov nije ispinjen, učitavanje treba ponoviti. Ako je om, zameniti na sa n.ž
+// Nači i ispisati sumu kvadratnih Korena svih neparnih brojeva od m do n
 
 #include<stdio.h>
 #include<stdlib.h>
