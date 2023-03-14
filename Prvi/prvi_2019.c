@@ -26,6 +26,6 @@ int main(){
             k++;
         }
     }
-    printf("%d brojeva u intervalu od %l do %l su deljivi svim svojim ciframa", k);
+    printf("%d brojeva u intervalu od %d do %d su deljivi svim svojim ciframa", k, a, b);
     return 0;
 }
