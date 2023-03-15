@@ -32,7 +32,7 @@ int main(){
          broj = broj * 10 + temp;
         }
         
-        pomocniNiz[k] = broj;
+        pomocniNiz[k] = broj; 
        
     }
     for(i = 0; i < k; i++){
@@ -43,12 +43,8 @@ int main(){
         }
     }
     printf("Vasi brojevi su:\n");
-    for(i = 0;i < k;i++){
-        if(broj / duzinaBroja == 0){
-            printf("%d,",pomocniNiz[k]);
-        }
-    }
-   
+    printf("%d,",pomocniNiz[k]);
+
     return 0;
 }
 
