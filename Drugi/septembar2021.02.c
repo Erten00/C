@@ -50,7 +50,7 @@ void unosPolja(int m, int matrica[MAX][MAX]){
         matrica[x][y] = 3;
     }
     while(1){
-        printf("Vaša trenutna pozicija je %d %d", y, x);
+        printf("Vaša trenutna pozicija je %d %d\n", y, x);
         printf("Unesite smer (ASDW) ili K za kraj! \n");
         scanf("%c", &smer);
         if(smer == 'A'){
