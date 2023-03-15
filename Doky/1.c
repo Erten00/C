@@ -15,11 +15,10 @@ int main(){
     int k;
     int broj = 0;
     int duzinaBroja = 0;
+    int pomocniNiz[k];
     printf("Koliko cete brojeva uneti:");
     scanf("%d",&k);
-    int pomocniNiz[k];
-  
-    
+
     printf("Unesite broj cifara:");
     scanf("%d",&n);
     printf("Unosite broj sa %d cifara",n);
