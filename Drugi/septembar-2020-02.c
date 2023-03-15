@@ -1,5 +1,5 @@
 // 2. Napisati program kojim se vrši zamena mesta najvećeg i najmanjeg elemenata
-// ispod sporedne dijagonale matrice X. Učitavanje matrice I tralenu obradu realizovati
+// ispod sporedne dijagonale matrice X. Učitavanje matrice I totalnu obradu realizovati
 // pomoću odvojenih funkcija
 
 #include<stdio.h>
