@@ -23,7 +23,7 @@ void ceneAutomobila(int budzet,int duzina){
     struct automobil Automobili[SIZE];
     printf("Unesite marku i cenu auta:");
     for(i = 1;i <= duzina;i++){
-        scanf("%s %d",Automobili[i].marka,&Automobili[i].cena);
+        scanf("%s %d",&Automobili[i].marka,&Automobili[i].cena);
         
     }
    
