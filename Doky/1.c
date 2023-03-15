@@ -16,6 +16,7 @@ int main(){
     int broj = 0;
     int duzinaBroja = 0;
     int pomocniNiz[k];
+
     printf("Koliko cete brojeva uneti:");
     scanf("%d",&k);
 
@@ -25,10 +26,10 @@ int main(){
     
     for(i = 0;i < k;i++){
         for(j = 0;j < n;j++){
-        int temp;
-        printf("\nUnesite cifru:");
-        scanf("%d",&temp);
-        broj = broj * 10 + temp;
+         int temp;
+         printf("\nUnesite cifru:");
+         scanf("%d",&temp);
+         broj = broj * 10 + temp;
         }
         
         pomocniNiz[k] = broj;
