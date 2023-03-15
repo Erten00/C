@@ -18,9 +18,8 @@ void unos(int matrix[SIZE][SIZE],int n){
 void ispis(int matrix[SIZE][SIZE],int n){
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
-            printf("%d ", matrix[i][j]);
+            printf("%d \n", matrix[i][j]);
         }
-        printf("\n");
     }
 }
 
