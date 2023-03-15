@@ -21,7 +21,7 @@ int main(){
 
     printf("Unesite broj cifara:");
     scanf("%d",&n);
-    printf("Unosite broj sa %d cifara",n);
+    printf("Unosite broj sa %d cifara",&n);
     
     for(i = 0;i < k;i++){
         for(j = 0;j < n;j++){
