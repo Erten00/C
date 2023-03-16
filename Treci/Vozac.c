@@ -31,14 +31,14 @@ int main(){
     int i = 0;
     int br = 1;
     FILE *vozaci,*trke;
-    vozaci = fopen("vozaci.txt","r");
+    vozac = fopen("vozaci.txt","r");
     trke = fopen("trke.txt","w");
-    if(vozaci == NULL){
+    if(vozac == NULL){
         printf("Greska1");
         exit(1);
     }
   
-    while(fscanf(vozaci,"%s,%s,%s",Vozaci[i].prezime,Vozaci[i].ime,Vozaci[i].nazivTima) == 1){
+    while(fscanf(VOZAC,"%s,%s,%s",Vozaci[i].prezime,Vozaci[i].ime,Vozaci[i].nazivTima) == 1){
         printf("%d.%s %s %s\n",i,Vozaci[i].prezime,Vozaci[i].ime,Vozaci[i].nazivTima);
         i++;
     }
@@ -51,10 +51,13 @@ int main(){
             Vozaci[i].redniBroj = 0;
         }
         for(i = 1;i < 8;i++){
+            if (i == 1)
+            {
+                Vozaci[i].bodovi += 10
+            }
             
         }
         fprintf(trke, "%d,%d",Vozaci[i].redniBroj,Vozaci[i].bodovi);
-       
         i++;
     }
     fclose(vozaci);
