@@ -56,7 +56,7 @@ int main(){
                 brojVrata++;
         }
             if(Vrata[i].povrsinaPlastike > 0 && Vrata[i].povrsinaStakla == 0 && Vrata[i].povrsinaDrveta == 0){
-                printf("Vrata su 100 posto od drveta\n");
+                printf("Vrata su 100 posto od plastike\n");
             }
             Vrata[i].cena = Vrata[i].povrsinaPlastike * cenaPlastike + Vrata[i].povrsinaDrveta * cenaDrveta + Vrata[i].povrsinaStakla * cenaStakla;
     }
