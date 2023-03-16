@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 100
+
 typedef struct igrac{
     char ime[20];
     float visina;
@@ -21,6 +22,7 @@ typedef struct igrac{
     int brojBlokada;
     float ukupnoPoena;
 }IGRAC;
+
 int main(){
     FILE * datoteka = fopen("igraci.txt", "r");
     if(datoteka == NULL){
