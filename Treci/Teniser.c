@@ -19,6 +19,7 @@ typedef struct teniser{
     char ime[30];
     char prezime[30];
     int brojpoena;
+    int SifraTenisera;
     int brojPoenaKojeBrani;
     int brojPoenaKOjeJeOsvojio;
 }TENISER;
