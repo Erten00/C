@@ -34,6 +34,7 @@ int main(){
         printf("greška");
         exit(1);
     }
+
     while(!feof(datoteka)){
         fscanf(datoteka, "%s %f %f %d %d %d %d", igraci[i].ime, &igraci[i].visina, &igraci[i].tezina, &igraci[i].brojKoseva, &igraci[i].brojAsistencija, &igraci[i].brojUkradenihLopti, &igraci[i].brojBlokada);
         igraci[i].ukupnoPoena = 0;
@@ -44,12 +45,15 @@ int main(){
         printf("%f \n" ,igraci[i].ukupnoPoena );
         i++;
     }
+
     IGRAC najbolji = igraci[0];
+
     for(int j = 0; j < i; j++){
         if(igraci[j].ukupnoPoena > najbolji.ukupnoPoena){
             najbolji = igraci[j];
         }
     }
+    
     printf("najbolji igrac je %s sa %f poena", najbolji.ime, najbolji.ukupnoPoena);
 return 0;
 }
