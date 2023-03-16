@@ -59,10 +59,9 @@ int main(){
             {
                 Vozaci[i].bodovi += 8;
             }
-            
-        }
         fprintf(trke, "%d,%d",Vozaci[i].redniBroj,Vozaci[i].bodovi);
         i++;
+        }
     }
     fclose(vozaci);
     fclose(trke);
