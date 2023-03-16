@@ -67,16 +67,11 @@ int main(){
         fscanf(dunp, "%s %s %s %s %s %s %f",  studenti[i].index, studenti[i].ime,studenti[i].prezime, studenti[i].departman, studenti[i].smer, studenti[i].godina, &studenti[i].prosek);
         if(strcmp(studenti[i].smer, studijskiProgram ) == 0 && strcmp(studenti[i].godina, godina ) == 0 ){
             if(prviPut){
-                printf("departman: %s ", studenti[i].departman);
-                printf("\n");
-                printf("studijski program: %s ", studenti[i].smer );
-                printf("\n");
-                printf("Godina studija: %s ", godina);
-                printf("\n");
-                printf("Spisak studenata: ");
-                printf("\n");
-                printf("BROJ INDEKSA \t IME \t PREZIME \t PROSEK ");
-                printf("\n");
+                printf("Departman: %s \n", studenti[i].departman);
+                printf("Studijski program: %s \n", studenti[i].smer );
+                printf("Godina studija: %s \n", godina);
+                printf("Spisak studenata: \n");
+                printf("BROJ INDEKSA \t IME \t PREZIME \t PROSEK \n");
                 prviPut = false;
             }
             brojStudenata++;
