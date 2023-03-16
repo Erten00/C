@@ -65,7 +65,5 @@ int main(){
     }
     fclose(vozaci);
     fclose(trke);
-
-
     return 0;
 }
