@@ -30,7 +30,6 @@ int main(){
     struct vozac Vozaci[SIZE];
     int i = 0;
     int br = 1;
-    char c;
     FILE *vozaci,*trke;
     vozaci = fopen("vozaci.txt","r");
     trke = fopen("trke.txt","w");
