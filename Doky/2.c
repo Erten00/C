@@ -17,9 +17,8 @@
 void Ispis(int mat[M][N]) {
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
-            printf("%d ", mat[i][j]);
+            printf("%d \n", mat[i][j]);
         }
-        printf("\n");
     }
 }
 
