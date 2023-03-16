@@ -76,7 +76,7 @@ int main(){
             }
             brojStudenata++;
             printf("%s \t %s \t %s \t %f \n", studenti[i].index, studenti[i].ime, studenti[i].prezime,  studenti[i].prosek);
-            sumaOcena += studenti[i].prosek;
+            sumaOcena = sumaOcena + studenti[i].prosek;
         }
         i++;
     }
