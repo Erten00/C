@@ -24,7 +24,7 @@ void ispis(int matrix[SIZE][SIZE],int n){
 }
 
 int suma(int matrix[SIZE][SIZE],int n){
-    int suma = 0;
+    int KonacanBroj = 0;
     int maks = 0;
     int min = matrix[n-1][n-1];
     for(int i = 0; i < n; i++){
@@ -41,8 +41,8 @@ int suma(int matrix[SIZE][SIZE],int n){
     }
     printf("maks: %d\n",maks);
     printf("min: %d\n",min);
-    suma = maks + min;
-    return suma;
+    KonacanBroj = maks + min;
+    return KonacanBroj;
 }
 
 int main(){
@@ -50,7 +50,7 @@ int main(){
     int n;
     printf("Unsite n:");
     scanf("%d", &n);
-    printf("Unsite matrucu:");
+    printf("Unsite matricu:");
     unos(X,n);
     printf("Uneta matrica:\n");
     ispis(X,n);
