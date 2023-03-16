@@ -20,7 +20,6 @@ typedef struct vrata{
     int povrsinaDrveta;
     int povrsinaStakla;
     float cena;
-
 }VRATA; 
 
 int main(){
@@ -50,11 +49,11 @@ int main(){
     }
 
 
-    while(!feof(VRATA)){
-       
-    for(int i = 0; i < brojVrata;i++){
-        if(fscanf(VRATA, "%d","%d","%d","%d",&Vrata[i].sifraModelaVrata,&Vrata[i].povrsinaPlastike,&Vrata[i].povrsinaDrveta,&Vrata[i].povrsinaStakla)){
-            brojVrata++;
+    while(!feof(VRATA))
+    {
+        for(int i = 0; i < brojVrata;i++){
+            if(fscanf(VRATA, "%d","%d","%d","%d",&Vrata[i].sifraModelaVrata,&Vrata[i].povrsinaPlastike,&Vrata[i].povrsinaDrveta,&Vrata[i].povrsinaStakla)){
+                brojVrata++;
         }
             if(Vrata[i].povrsinaPlastike > 0 && Vrata[i].povrsinaStakla == 0 && Vrata[i].povrsinaDrveta == 0){
                 printf("Vrata su 100 posto od drveta\n");
