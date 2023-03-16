@@ -19,14 +19,13 @@ typedef struct teniser{
     char ime[30];
     char prezime[30];
     int brojpoena;
-    int SifraTenisera;
     int brojPoenaKojeBrani;
     int brojPoenaKojeJeOsvojio;
 }TENISER;
 
 int main(){
     TENISER nizTenisera[MAX];
-    FILE * teniseri = fopen("teniseri.txt", "r");
+    FILE *teniseri = fopen("teniseri.txt", "r");
     if(teniseri == NULL){
         printf("Greška prilikom otvaranja datoteke1");
         exit(1);
