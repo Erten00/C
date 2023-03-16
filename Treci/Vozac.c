@@ -55,6 +55,10 @@ int main(){
             {
                 Vozaci[i].bodovi += 10;
             }
+            else if (i == 2)
+            {
+                Vozaci[i].bodovi += 8;
+            }
             
         }
         fprintf(trke, "%d,%d",Vozaci[i].redniBroj,Vozaci[i].bodovi);
