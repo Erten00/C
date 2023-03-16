@@ -47,13 +47,13 @@ typedef struct student{
 }STUDENT;
 
 int main(){
+    STUDENT studenti[SIZE];
     FILE *dunp = fopen("DUNP.txt", "r");
     if(dunp == NULL){
         printf("greška 1");
         exit(1);
     }
     int i = 0;
-    STUDENT studenti[SIZE];
     char studijskiProgram[30];
     char godina[10];
     printf("unesite studijski prigram:");
