@@ -39,6 +39,7 @@ void ispis (int m, int matrica[MAX][MAX]){
         printf("\n");
     }
 }
+
 void unosPolja(int m, int matrica[MAX][MAX]){
     int x = 0;
     int y = 0;
