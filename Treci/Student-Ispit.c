@@ -28,7 +28,7 @@ int main(){
     int i = 0;
     bool jeLiPolozio = false;
     struct student Studenti[SIZE];
-    
+
     FILE *ispiti = fopen("ispiti.txt", "r");
     FILE *polozili = fopen("polozili.txt", "w");
     FILE *nisu_polozili = fopen("pali.txt", "w");
@@ -44,13 +44,14 @@ int main(){
         printf("Greska 3");
         exit(1);
     }
+
     while(!feof(ispiti)){
         fscanf(ispiti,"%s %s %d %d %d",Studenti[i].ime,Studenti[i].prezime,&Studenti[i].brPoenaSaPredavanja,&Studenti[i].brPoenaSaKolokvijuma,&Studenti[i].brPoenaSaIspita);
         Studenti[i].ukupanBrPoena = Studenti[i].brPoenaSaPredavanja + Studenti[i].brPoenaSaKolokvijuma + Studenti[i].brPoenaSaIspita;
         if(Studenti[i].ukupanBrPoena > 50){
             jeLiPolozio = true;
         }
-        i++;    
+        i++;
     }
     for(int j = 0;j < i;j++){
         if(jeLiPolozio){
@@ -62,6 +63,8 @@ int main(){
         
     }
     fclose(ispiti);
+    fclose(polozili);
+    fclose(nisu_polozili);
 
 
     return 0;
