@@ -1,4 +1,4 @@
-// Sastaviti program koji iz datoteke igraci txt čita podatke o igračima 
+// Sastaviti program koji iz datoteke igraci.txt čita podatke o igračima 
 //(visina, težina, broj koševa, broj asistencija, broj ukradenih lopti, broj blokada), 
 //pronalazi igrača sa najvećim brojem ostvarenih poena na standardnom izlazu ispisuje ime tog igrača i broj ostvarenih poena.
 // Ukupan broj poena računati kao:
@@ -24,13 +24,15 @@ typedef struct igrac{
 }IGRAC;
 
 int main(){
+    
+    IGRAC igraci[MAX];
+    int i = 0;
+
     FILE * datoteka = fopen("igraci.txt", "r");
     if(datoteka == NULL){
         printf("greška");
         exit(1);
     }
-    IGRAC igraci[MAX];
-    int i = 0;
     while(!feof(datoteka)){
         fscanf(datoteka, "%s %f %f %d %d %d %d", igraci[i].ime, &igraci[i].visina, &igraci[i].tezina, &igraci[i].brojKoseva, &igraci[i].brojAsistencija, &igraci[i].brojUkradenihLopti, &igraci[i].brojBlokada);
         igraci[i].ukupnoPoena = 0;
