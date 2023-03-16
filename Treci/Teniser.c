@@ -43,7 +43,7 @@ int main(){
     int i = 0;
     while(!feof(teniseri)){
         fscanf(teniseri, "%d %s %s %d", &nizTenisera[i].sifraIgraca, nizTenisera[i].ime, nizTenisera[i].prezime, &nizTenisera[i].brojpoena);
-        nizTenisera[i].brojPoenaKOjeJeOsvojio = 0;
+        nizTenisera[i].brojPoenaKojeJeOsvojio = 0;
         nizTenisera[i].brojPoenaKojeBrani = 0;
         i++;
     }
@@ -52,12 +52,12 @@ int main(){
         fscanf(wimbledon, "%d", &sifraIgraca);
         for(int j = 0; j < i; i++){
             if(sifraIgraca == nizTenisera[j].sifraIgraca ){
-                fscanf(wimbledon, "%d %d", &nizTenisera[j].brojPoenaKojeBrani, &nizTenisera[j].brojPoenaKOjeJeOsvojio);
+                fscanf(wimbledon, "%d %d", &nizTenisera[j].brojPoenaKojeBrani, &nizTenisera[j].brojPoenaKojeJeOsvojio);
             }
         }
     }
     for(int j  = 0; j < i; j++){
-        int noviBrojBodova = nizTenisera[j].brojpoena - nizTenisera[j].brojPoenaKojeBrani + nizTenisera[j].brojPoenaKOjeJeOsvojio;
+        int noviBrojBodova = nizTenisera[j].brojpoena - nizTenisera[j].brojPoenaKojeBrani + nizTenisera[j].brojPoenaKojeJeOsvojio;
         fprintf(atplista, "%d %s %s %d", nizTenisera[j].sifraIgraca, nizTenisera[j].ime, nizTenisera[j].prezime, noviBrojBodova);
     }
     fclose(teniseri);
