@@ -1,13 +1,14 @@
-/* u programskom jeziku c napisati strukturu programa za sumiranje prostih brojeva.
+/*
+u programskom jeziku c napisati strukturu programa za sumiranje prostih brojeva.
 najpre uneti maksimalnu sumu a potom unositi cele brojeve . sumirati samo proste brojeve
 dok njihova suma ne postane veća od zadate maksimalne sume.  
 prikazati dobijenu sumu .
 */
 
-
 #include <stdio.h>
 #include<stdlib.h>
 #include <stdbool.h>
+
 int main(){
     int maksimalnaSuma, suma = 0, broj;
     bool flag = true;
