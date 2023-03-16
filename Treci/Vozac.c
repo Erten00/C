@@ -27,13 +27,13 @@ typedef struct vozac{
 }VOZAC;
 
 int main(){
+    struct vozac Vozaci[SIZE];
     FILE *vozaci,*trke;
     int i = 0;
     int br = 1;
     char c;
     vozaci = fopen("vozaci.txt","r");
     trke = fopen("trke.txt","w");
-    struct vozac Vozaci[SIZE];
     if(vozaci == NULL){
         printf("Greska1");
         exit(1);
