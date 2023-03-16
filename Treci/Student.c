@@ -56,7 +56,7 @@ int main(){
     int i = 0;
     char studijskiProgram[30];
     char godina[10];
-    printf("unesite studijski prigram:");
+    printf("unesite studijski program:");
     scanf("%s", studijskiProgram);
     printf("unesite godinu studija:");
     scanf("%s", godina);
