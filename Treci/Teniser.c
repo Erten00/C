@@ -21,7 +21,7 @@ typedef struct teniser{
     int brojpoena;
     int SifraTenisera;
     int brojPoenaKojeBrani;
-    int brojPoenaKOjeJeOsvojio;
+    int brojPoenaKojeJeOsvojio;
 }TENISER;
 
 int main(){
