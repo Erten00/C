@@ -1,5 +1,5 @@
-// Datoteka ispiti.txt sadrži podatke o 5 studenata i ispitima u obliku niza struktura. Struktura sadrži polja prezime,
-// redavanja, kolokvijumi i ispit, koja redom označavaju ime studenta, prezime studenta, broj sa predavanja, broj poena
+// Datoteka ispiti.txt sadrži podatke o 5 studenata i ispitima u obliku niza struktura. Struktura sadrži polja ime,prezime,
+// predavanja, kolokvijumi i ispit, koja redom označavaju ime studenta, prezime studenta, broj sa predavanja, broj poena
 // sa kolokvijuma broj poena sa ispita. Nacrtati strukturni dijagram toka algoritma 
 // (ili tekstualno opisati algoritam za rešavanje zadatka) i sastaviti program koji čita poda studentima 
 // i ispituje da li je student položio ispit (ispit je položen ako je zbir poena sa predavanja, kolokvijuma i ispita
@@ -25,12 +25,13 @@ typedef struct student{
 
 
 int main(){
-    FILE *ispiti = fopen("ispiti.txt", "r");
-    FILE *polozili = fopen("polozili.txt", "w");
-    FILE *nisu_polozili = fopen("pali.txt", "w");
     int i = 0;
     bool jeLiPolozio = false;
     struct student Studenti[SIZE];
+    
+    FILE *ispiti = fopen("ispiti.txt", "r");
+    FILE *polozili = fopen("polozili.txt", "w");
+    FILE *nisu_polozili = fopen("pali.txt", "w");
     if(ispiti == NULL){
         printf("Greska 1");
         exit(1);
