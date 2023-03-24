@@ -39,17 +39,3 @@ int main() {
     }
     return 0;
 }
-
-void exchange(int arr[], int n) {
-    int i, j, sum;
-    for (i = 0; i < n; i++) {
-        sum = 0;
-        for (j = i + 1; j < n; j++) {
-            sum += arr[j];
-            if (sum == j - i + 1) {
-                arr[i] = sum;
-                break;
-            }
-        }
-    }
-}
