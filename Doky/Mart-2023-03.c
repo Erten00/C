@@ -19,7 +19,7 @@ struct Student {
 };
 
 int main(){
-    
+
     FILE* student_file = fopen("studenti.tkt", "r");
     FILE* points_file = fopen("poeni.tkt", "r");
     FILE* output_file = fopen("result.tkt", "w");
@@ -38,7 +38,6 @@ int main(){
                   students[num_students].first_name, students[num_students].last_name);
         num_students++;
     
-
     // read in points data and add to student records
     int index, points;
     while(!feof(points_file))
