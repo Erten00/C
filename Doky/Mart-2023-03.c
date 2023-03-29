@@ -18,10 +18,10 @@ struct Student {
     int points;
 };
 
-int main() {
+int main(){
     // open input files for reading
-    FILE *student_file = fopen("studenti.tkt", "r");
-    FILE *points_file = fopen("poeni.tkt", "r");
+    FILE* student_file = fopen("studenti.tkt", "r");
+    FILE* points_file = fopen("poeni.tkt", "r");
 
     // open output file for writing
     FILE* output_file = fopen("result.tkt", "w");
@@ -35,21 +35,22 @@ int main() {
     int num_students = 0;
 
     // read in student data
-    while (fscanf(student_file, "%d %s %s", &students[num_students].index,
-                  students[num_students].first_name, students[num_students].last_name) != EOF) {
+    while(!feof(student_file))
+        fscanf(student_file, "%d %s %s", &students[num_students].index,
+                  students[num_students].first_name, students[num_students].last_name);
         num_students++;
-    }
+    
 
     // read in points data and add to student records
     int index, points;
-    while (fscanf(points_file, "%d %d", &index, &points) != EOF) {
-        for (int i = 0; i < num_students; i++) {
+    while(!feof(points_file))
+        fscanf(points_file, "%d %d", &index, &points);
+        for (int i = 0; i < num_students; i++){
             if (students[i].index == index) {
                 students[i].points = points;
                 break;
             }
         }
-    }
 
     // write passing student data to output file
     for (int i = 0; i < num_students; i++) {
