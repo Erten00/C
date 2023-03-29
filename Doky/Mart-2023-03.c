@@ -34,8 +34,7 @@ int main(){
 
     // read in student data
     while(!feof(student_file))
-        fscanf(student_file, "%d %s %s", &students[num_students].index,
-                  students[num_students].first_name, students[num_students].last_name);
+        fscanf(student_file, "%d %s %s", &students[num_students].index,students[num_students].first_name, students[num_students].last_name);
         num_students++;
     
     // read in points data and add to student records
@@ -52,8 +51,7 @@ int main(){
     // write passing student data to output file
     for (int i = 0; i < num_students; i++) {
         if (students[i].points >= 50) {
-            fprintf(output_file, "%d %s %s %d\n", students[i].index, students[i].last_name,
-                    students[i].first_name, students[i].points);
+            fprintf(output_file, "%d %s %s %d\n", students[i].index, students[i].last_name,students[i].first_name, students[i].points);
         }
     }
 
