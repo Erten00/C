@@ -10,6 +10,20 @@
 
 int count_magical_digits(int n);
 
+int count_magical_digits(int n) {
+    int count = 0, position = 1;
+    while (n > 0) {
+        int digit = n % 10;
+        if (digit == position) {
+            count++;
+        }
+        position++;
+        n /= 10;
+    }
+    return count;
+} 
+
+
 int main() {
     int n;
     while (1) {
@@ -25,17 +39,4 @@ int main() {
         printf("%d has %d magical digits.\n", n, count_magical_digits(n));
     }
     return 0;
-}
-
-int count_magical_digits(int n) {
-    int count = 0, position = 1;
-    while (n > 0) {
-        int digit = n % 10;
-        if (digit == position) {
-            count++;
-        }
-        position++;
-        n /= 10;
-    }
-    return count;
 }
