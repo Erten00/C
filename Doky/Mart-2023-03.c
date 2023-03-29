@@ -19,11 +19,9 @@ struct Student {
 };
 
 int main(){
-    // open input files for reading
+    
     FILE* student_file = fopen("studenti.tkt", "r");
     FILE* points_file = fopen("poeni.tkt", "r");
-
-    // open output file for writing
     FILE* output_file = fopen("result.tkt", "w");
 
     if (student_file == NULL || points_file == NULL || output_file == NULL) {
