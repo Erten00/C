@@ -8,8 +8,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int count_magical_digits(int n);
-
 int count_magical_digits(int n) {
     int count = 0, position = 1;
     while (n > 0) {
