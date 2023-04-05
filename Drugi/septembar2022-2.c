@@ -4,7 +4,10 @@
 #define MAX 100
 
 int maksimanoAutomobila(int cene[MAX], int n, int budzet){
-    int min = cene[0], suma = 0, brojAutomobila = 0, index;
+    int min = cene[0];
+    int suma = 0;
+    int brojAutomobila = 0;
+    int index;
     
     while(1){
         for(int i = 0; i < n; i++){
