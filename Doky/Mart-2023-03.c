@@ -13,7 +13,7 @@
 
 struct Student {
     int index;
-    char first_name[50];
+    char first_name[50];    
     char last_name[50];
     int points;
 };
