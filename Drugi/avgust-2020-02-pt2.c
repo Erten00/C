@@ -3,7 +3,6 @@
 // M&M i izvršiti rotiranje njenog oboda za jedno mesto u smeru kazaljke na satu (kao što je prikazano na primeru).
 // P
 
-
 #include<stdio.h>
 #include<string.h>
 #include<stdbool.h>
