@@ -36,8 +36,6 @@ void suma(int broj){
     }
 }
 
-
-
 int main(){
     int broj;
     printf("Unesite broj:");
