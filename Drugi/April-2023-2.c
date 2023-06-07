@@ -16,21 +16,17 @@ int is_anagram(int *arr1, int *arr2, int len1, int len2) {
     if (len1 != len2) {
         return 0;
     }
-
     int freq1[10] = {0};
     int freq2[10] = {0};
-
     for (int i = 0; i < len1; i++) {
         freq1[arr1[i]]++;
         freq2[arr2[i]]++;
     }
-
     for (int i = 0; i < 10; i++) {
         if (freq1[i] != freq2[i]) {
             return 0;
         }
     }
-
     return 1;
 }
 
