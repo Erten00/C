@@ -9,7 +9,6 @@
     Na kraju prikazati poruku o količini kupusa koju je zeka poje i broju skokova koje je izvršio.
     Prekinuti sa unosom kada korisnik unese karakter K. Za unos matrice i unos koraka odraditi posebne funkcije.
 */
-
 // sve radi samo prebaciti u posebne funkcije (zadnji red zadatka)
 #include <stdio.h>
 int main(){
