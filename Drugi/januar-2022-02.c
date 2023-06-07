@@ -48,7 +48,6 @@ bool prvoveraDaLiSuAnaframi(char *prvaRec, char *drugaRec){
         printf("%d",drugiBrojacReci[i]);
         if(prviBrojacReci[i] != drugiBrojacReci[i])
             return false;
-
         return true;
     }
 }
@@ -56,7 +55,6 @@ bool prvoveraDaLiSuAnaframi(char *prvaRec, char *drugaRec){
 int main(){
     char prvaRec[] = "Listent";
     char drugaRec[] = "Silent";
-
     if(prvoveraDaLiSuAnaframi(prvaRec, drugaRec)){
         printf("Anagrami su!");
     }
