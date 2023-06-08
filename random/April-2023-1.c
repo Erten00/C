@@ -2,7 +2,7 @@
 Sastaviti program koji računa vrednost izraza ex na osnovu prvih nekoliko (n) članova Tejlorovog reda za uneto x.
 */
 
-    #include <stdio.h>
+#include <stdio.h>
 
 double calculate_ex(double x, int n) {
     double sum = 1;
