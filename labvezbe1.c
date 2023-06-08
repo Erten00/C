@@ -19,7 +19,8 @@ void izbaci (int A[],int n)
 
 int main(){
     int i,n,a[100];
-    printf("Unesite n");scanf("%d",&n);
+    printf("Unesite n");
+    scanf("%d",&n);
       printf("Unesite elemente niza");
       for(i=0;i<n;i++)
       scanf("%d",&a[i]);
