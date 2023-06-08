@@ -1,9 +1,9 @@
-#include<stdio.h>
-
 // 1. Nacrtati strukturni dijagram toka algoritma i na programskom jeziku napisati strukturni program za sumiranje
 // celih pozitivnih N to cifrenih brojeva Brojevi se unose sa tastature redom, a sumiranje se vrši sve dok se ne unese
 // broj čija je prva cifra veća od njegove poslednje cifre. Prikazati dobijenu sumu brojeva: Napomena: Nije dozvoljena
 // upotreba indeksiranih promenljivih. Korisnik pre unosa brojeva mora uneti broj N. Sumirati samo brojeve koji imaju N cifara
+
+#include<stdio.h>
 
 int main(){
     int suma = 0;
@@ -14,8 +14,6 @@ int main(){
     printf("Koliko cete brojeva uneti:");
     scanf("%d",&k);
     int pomocniNiz[k];
-  
-    
     printf("Unesite broj cifara:");
     scanf("%d",&n);
     printf("Unosite broj sa %d cifara",n);
@@ -26,10 +24,8 @@ int main(){
         printf("\nUnesite cifru:");
         scanf("%d",&temp);
         broj = broj * 10 + temp;
-        }
-        
+        } 
         pomocniNiz[i] = broj;
-       
     }
     for(i = 0; i < k; i++){
         duzinaBroja = 0;
