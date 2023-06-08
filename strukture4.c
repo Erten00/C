@@ -31,8 +31,7 @@ main()
     /*Racunanje ukupnih temperatura u 7h, 13h i 19h i dnevne prosecne temperature*/
     for(i=0; i<10; i++)
     {
-    fscanf(ulaz, "%d%d%d%d", &temp[i].datum, &temp[i].m7,
-    &temp[i].m13, &temp[i].m19);
+    fscanf(ulaz, "%d%d%d%d", &temp[i].datum, &temp[i].m7, &temp[i].m13, &temp[i].m19);
     uk7+=temp[i].m7;
     uk13+=temp[i].m13;
     uk19+=temp[i].m19;
