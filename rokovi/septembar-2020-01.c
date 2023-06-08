@@ -86,11 +86,5 @@ int main(){
 }
 
 printf("Lnx je:%d",lnx);
-    
-        
-        
-    
-    
-
     return 0;
 }
