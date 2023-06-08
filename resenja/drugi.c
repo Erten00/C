@@ -11,6 +11,7 @@ int main(){
     int sat, min, sek, s, n, h1,h2, m1, m2, s1, s2;
     printf("unesite n=");
     scanf("%d", &n);
+
     for(sat=0; sat<=23; sat++){
         for(min=0; min<=59; min++){
             for(sek=0; sek<=59; sek++){
