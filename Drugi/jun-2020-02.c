@@ -15,7 +15,6 @@ void ispis(int niz[SIZE],int n){
     for(int i = 0;i < n;i++){
         printf("%d ",niz[i]);
     }
-  
 }
 
 void umetanje(int niz[SIZE],int n,int b){
