@@ -65,7 +65,6 @@ void rotiranjeMatrice(int m,int n,int matrica[SIZE][SIZE]){
         kolona++;
 }
 
-
 int main(){
     int matrica[SIZE][SIZE];
     int m = 4,n = 4;
@@ -75,6 +74,5 @@ int main(){
     rotiranjeMatrice(m,n,matrica);
     ispis(m,n,matrica);
     
-
     return 0;
 }
