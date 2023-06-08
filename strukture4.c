@@ -41,6 +41,7 @@ main()
  pr7=(float)uk7/10;
  pr13=(float)uk13/10;
  pr19=(float)uk19/10;
+ 
  /*Sortiranje prosecnih temperatura od najvise ka najnize*/
  for(i=0; i<9; i++)
  for(j=i+1; j<10; j++)
@@ -53,6 +54,7 @@ main()
  prdnevna[j]=pom;
  temp[j].datum=pomd;
  }
+
  /*Upis podataka u novokreiranu datoteku*/
  for(i=0; i<10; i++)
  fprintf(izlaz, " %02d %.2f\n", temp[i].datum, prdnevna[i]);
