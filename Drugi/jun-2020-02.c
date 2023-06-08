@@ -3,9 +3,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-
 #define SIZE 100
-
 
 void unos(int niz[SIZE],int n){
     for(int i = 0;i < n;i++){

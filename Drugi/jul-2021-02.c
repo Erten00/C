@@ -5,9 +5,6 @@
 // koju unosi korisnik sa standardnog ulaza. Pozicija lifta kreće od 1 do maksimalnog
 // broja sprata kojeg unosi korisnik. Na kraju se ispisuju podaci o osobama koje se nalaze
 // na poslednjem spratu i koliko je osoba prošlo kroz lift.
-
-
-
 // matrica 2x10 - čuva spratove i težinu osoba
 // ako je prazno onda je 0.
 
