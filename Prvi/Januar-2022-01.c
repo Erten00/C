@@ -12,7 +12,6 @@
 
 int main() {
     int number, position = 1, digit;
-
     while (1) {
         printf("Enter a number: ");
         scanf("%d", &number);
