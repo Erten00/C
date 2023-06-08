@@ -8,6 +8,7 @@ prikazati dobijenu sumu .
 #include <stdio.h>
 #include<stdlib.h>
 #include <stdbool.h>
+#include <bool.h>
 int main(){
     int maksimalnaSuma, suma = 0, broj;
     printf("unesite maksimalnu sumu :");
