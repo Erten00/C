@@ -7,9 +7,9 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "/home/erten/Documents/C",
-      "program": "/home/erten/Documents/C/build/Debug/outDebug",
+      "externalConsole": true,
+      "cwd": "c:/Users/erten/Documents/GitHub/C",
+      "program": "c:/Users/erten/Documents/GitHub/C/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
