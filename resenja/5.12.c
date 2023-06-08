@@ -18,6 +18,7 @@ int main(){
         n = m ^ n;
         m = m ^ n;
     }
+    printf("M=%d N=%d ", m, n );
     for(i=m; i<=n; i++){
         if(i%2==1){
             s+=sqrt(i);
