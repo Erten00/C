@@ -1,9 +1,9 @@
 /*
-sastaviti program na programskom jeziu c kojim se na početku zadaju brojevi m i n, a zatim se redom unose
+Sastaviti program na programskom jeziu c kojim se na početku zadaju brojevi m i n, a zatim se redom unose
 brojevi i za svaki broj se vrši provera da li odgovara kriterijumu da je n-to cifreni i da je suma cifara
 tog broja deljiva sa predposlednjom cifrom tog broja .
 ako broj odgovara kriterijumu onda ga ispisati na standardnom izlazu.
-unošenje vršiti dok se ne unese m brojeva koji odgovaraju kriterijumima.
+Unošenje vršiti dok se ne unese m brojeva koji odgovaraju kriterijumima.
 na kraju ispisati i koliko je brojeva unseo korisnik koji ne odgovaraju kriterijumu
 */
 
@@ -43,6 +43,6 @@ int main(){
             break;
         }
     }
-    printf("%d ", brojeviKojiNeOdgovaraju);
+    printf("Uneseno je : %d koji ne odgovaraju", brojeviKojiNeOdgovaraju);
     return 0;
 }
