@@ -1,7 +1,6 @@
 // 2. Na programskom jeziku C napisati funkciju rotirajudesno koja vrši rotiranje prosledenog
 // iza dužine N za jedno mesto udesno. U glavnom programu umeti kvadratnu matricu i dimenzija
 // M&M i izvršiti rotiranje njenog oboda za jedno mesto u smeru kazaljke na satu (kao što je prikazano na primeru).
-// P
 
 #include<stdio.h>
 #include<string.h>
