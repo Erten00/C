@@ -76,7 +76,6 @@ void izracunaj(int matrix[SIZE][SIZE],int m,int n){
             printf("%d %d\n",i,j);
         }
         }
-       
     }
     printf("Postoji %d polja koji su jednaki zbiru arimetickih srednina",brojTrazenihEl);
 }
