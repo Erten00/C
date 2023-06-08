@@ -42,11 +42,6 @@ main()
  printf("\n\n Datoteka je kreirana.\n");
  printf("\n Rezred za pretragu: ");
  scanf("%d",&x);
- if((dato=fopen("ucenik.txt","r"))==NULL)
- {
- printf("\n Greska pri otvaranju datoteke!");
- exit(1);
- }
  printf("\n -Ucenici %d-og razreda-\n", x);
  for(i=0; i<n; i++)
  {

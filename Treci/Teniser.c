@@ -25,21 +25,15 @@ typedef struct teniser{
 
 int main(){
     TENISER nizTenisera[MAX];
-    FILE *teniseri = fopen("teniseri.txt", "r");
-    if(teniseri == NULL){
+    
+    FILE* teniseri = fopen("teniseri.tkt", "r");
+    FILE* wimbledon = fopen("wimbledon.txt", "r");
+    FILE* atplista = fopen("atplista.txt", "w");
+    if(teniseri == NULL || wimbldon == NULL || atplista == NULL){
         printf("Greška prilikom otvaranja datoteke1");
         exit(1);
     }
-    FILE * wimbledon = fopen("wimbledon.txt", "r");
-    if(wimbledon == NULL){
-        printf("Greška prilikom otvaranja datoteke2");
-        exit(1);
-    }
-    FILE * atplista = fopen("atplista.txt", "w");
-    if(atplista == NULL){
-        printf("Greška prilikom otvaranja datoteke3");
-        exit(1);
-    }
+
     int i = 0;
     while(!feof(teniseri)){
         fscanf(teniseri, "%d %s %s %d", &nizTenisera[i].sifraIgraca, nizTenisera[i].ime, nizTenisera[i].prezime, &nizTenisera[i].brojpoena);

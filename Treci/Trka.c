@@ -4,9 +4,9 @@
 #define MAX 100
 
 typedef struct vozac {
-    char[30] prezime;
-    char[30] ime;
-    char[30] tim;
+    char prezime[30];
+    char ime[30];
+    char tim[30];
     int bodovi;
 }VOZAC;
 
@@ -29,7 +29,7 @@ int main(){
             break;
         }
         else{
-            fscanf(, "%s %s %s %d", &vozaci[i].prezime, &vozaci[i].ime, &vozaci[i].tim);
+            fscanf(vozaci_fajl, "%s %s %s %d", &vozaci[i].prezime, &vozaci[i].ime, &vozaci[i].tim);
         }
         vozaci[i].bodovi = 0;
     }
