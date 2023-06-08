@@ -1,11 +1,13 @@
-/*date su dve datoteke ROBA.DAT i PROMET.DAT. prva datotka sastoji se od slogova koji sadrže:
-//šifru artika koji se nalazi u magacinu, naziv robe, naziv proizvodjača, i količina na početku radnog dana.
-//druga datoteka, na kraju radnog dana, sadrži informacije o tome koliko se uvećala ili smanjila količina
+/*
+Date su dve datoteke ROBA.DAT i PROMET.DAT. prva datotka sastoji se od slogova koji sadrže:
+šifru artika koji se nalazi u magacinu, naziv robe, naziv proizvodjača, i količina na početku radnog dana.
+druga datoteka, na kraju radnog dana, sadrži informacije o tome koliko se uvećala ili smanjila količina
 nekog artikla u magacinu.
 slog druge datoteke čine šifra artikla i količne. vrednost polja količina može biti 
 pozitivna (uvećana količina  robe u magacinu) ili negativna (smanjena količina robe u magacinu).
 Napisati program kojim  će se na kraju radnog dana ubaciti prave količine artikla  u datoteku 
-roba.dat  a na osnovu datoteke promet.dat */
+roba.dat  a na osnovu datoteke promet.dat 
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
