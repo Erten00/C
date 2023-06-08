@@ -20,8 +20,6 @@ void exchange(int arr[], int n) {
     }
 }
 
-void exchange(int arr[], int n);
-
 int main() {
     int n, i, j;
     printf("Enter the size of the matrix: ");

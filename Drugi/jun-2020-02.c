@@ -28,7 +28,6 @@ void umetanje(int niz[SIZE],int n,int b){
             pozicijaElemena = i;
         }
     }
-    
     n+=1;
     for(int i = n  - 1;i >= pozicijaElemena;i--){
         niz[i] = niz[i - 1];

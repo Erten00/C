@@ -21,10 +21,12 @@ void formiranje(int A[10] [10],int n)
             A[i][j] = br++;
 }
 int main(){
-    int i,j,n,a[10] [10];
-    printf("Unesite n"); scanf("%d",&n);
+    int n,a[10][10];
+    printf("Unesite n"); 
+    scanf("%d",&n);
     formiranje(a,n);
     printf("matrica je\n");
+    int i,j;
     for(i=0;i<n;i++)
         for(j=0;j<n;j++)
         printf("%d",a[i][j]);
