@@ -16,7 +16,7 @@ int main(){
     int suma = 0;
     int S = 0;
     int niz[SIZE],i;
-    bool zastava = true;
+    bool flag = true;
     int prostiBrojevi = 0;
     int temp = 0;
    
@@ -27,7 +27,7 @@ int main(){
   
     while(S >= suma){
         scanf("%d",&broj);
-       if(zastava == true){
+       if(flag == true){
         temp = broj;
         niz[prostiBrojevi] = broj;
         suma += broj;
@@ -36,24 +36,24 @@ int main(){
     }
   
     if(broj == 0 || broj == 1){
-        zastava = true;
+        flag = true;
     }
     while(i > broj){
         i = 2;
         if(broj % i == 0){
-        zastava = false;
+        flag = false;
         break;
        }
        i++;
        }
   
         printf("Prosti brojevi su:");
-         if(zastava == true){
+         if(flag == true){
           printf("%d ",temp);
         }
         
     for(i = 0;i < prostiBrojevi + 1; i++){
-        if(zastava == true){
+        if(flag == true){
             if(niz[i] == 0){
                 break;
             }
