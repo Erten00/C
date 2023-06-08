@@ -23,16 +23,16 @@ typedef struct proizvod{
 
 int main(){
     int i=0, j, t1, t2;
-    FILE *roba, *promet;
     PROIZVOD proizvodi[MAX];
-    if((roba = fopen("roba.dat", "r")) == NULL){
-        printf("Greška prilikom otvaranja datoteke roba.dat");
-        exit(1);
+    
+    FILE* promet = fopen("promet.txt", "r");
+    FILE* roba = fopen("poeni.tkt", "r");
+
+     if (promet == NULL || roba == NULL) {
+        printf("Error opening input/output files.\n");
+        return 1;
     }
-    if((promet = fopen("promet.dat", "r")) == NULL){
-        printf("Greška prilikom otvaranja datoteke promet.dat");
-        exit(1);
-    }
+    
     while(1){
         if(feof(roba)){
             break;
