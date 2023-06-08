@@ -36,21 +36,20 @@ int main(){
 
     //Suma kvadratnih korena od m do n
     if(n > m){
-       
-    for(m = m;m < n;m++){
+        for(m = m;m < n;m++){
         niz2[m] = m;
         if(m % 2 == 1){
            s+=sqrt(niz2[m]); 
         }
     }
     }
+
     if(m > n){
-    
-    for(n = n;n < m;n++){
+        for(n = n;n < m;n++){
         niz1[n] = n;
         if(n % 2 == 1){
             s+=sqrt(niz1[n]);
-        }
+            }
     }
     }
    printf("\nSuma kvadratnih korena od m do n je:%d",s);
