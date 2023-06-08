@@ -13,21 +13,17 @@ int isSymmetric(int number) {
         reverse = reverse * 10 + digit;
         number /= 10;
     }
-
     return (originalNumber == reverse);
 }
 
 int main() {
     int number;
-
     printf("Enter numbers: ");
-
     while (scanf("%d", &number) == 1) {
         if (isSymmetric(number)) {
             printf("Symmetric number found: %d\n", number);
             break;
         }
     }
-
     return 0;
 }

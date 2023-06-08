@@ -21,7 +21,6 @@ int count_magical_digits(int n) {
     return count;
 } 
 
-
 int main() {
     int n;
     while (1) {
