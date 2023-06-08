@@ -1,13 +1,8 @@
-/*DRŽAVNI UNIVERZITET U NOVOM PAZARU
-
-OSNOVI PROGRAMIRANIA
-
-1. Sa ulaza se učitavajo prirodni brojevi a i b. Napisati program kojim se ispituju svi prirodne broje ir nervate
-
-Ja,b) koji su deljivi svim svojim ciframa, ne uzimajući u obzir poslednju citru
+/*
+Sa ulaza se učitavajo prirodni brojevi a i b. Napisati program kojim se ispituju svi prirodne broje ir nervate
+Ja,b) koji su deljivi svim svojim ciframa, ne uzimajući u obzir poslednju citru.
 
 Na primer, ako je interval 128 do 1521, prvi broj zadovljava uslov jer je deljiv sa 12 ne mora da bude
-
 */
 #include<stdio.h>
 #include<stdbool.h>

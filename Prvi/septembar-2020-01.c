@@ -1,7 +1,6 @@
 // 1.Napisati program za izračunavanje funkcije Inx=(x-1)-(-1) (x-1)
 // Prestati sa sumiranjem kada je apsolutna vrednost člana manja od 10.
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include<math.h>
