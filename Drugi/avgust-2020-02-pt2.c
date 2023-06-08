@@ -31,22 +31,22 @@ void rotiranjeMatrice(int m,int n,int matrica[SIZE][SIZE]){
     int prethodni = 0;
     int red = 0, kolona = 0;
     prethodni = matrica[red + 1][kolona];
-    
+
     for(int i = kolona;i < n;i++){
         trenutni = matrica[red][i];
         matrica[red][i] = prethodni;
         prethodni = trenutni;
         }
         red++;
-
-        for(int i = red;i < m;i++){
+        
+    for(int i = red;i < m;i++){
             trenutni = matrica[i][n-1];
             matrica[i][n-1] = prethodni;
             prethodni = trenutni;   
         }
         n--;
 
-        if(red < m){
+    if(red < m){
             for(int i = n-1;i >= 0;i--){
                 trenutni = matrica[m-1][i];
                 matrica[m-1][i] = prethodni;
@@ -55,7 +55,7 @@ void rotiranjeMatrice(int m,int n,int matrica[SIZE][SIZE]){
         }
         m--;
 
-        if(kolona < n){
+    if(kolona < n){
             for(int i = m-1;i >= 0;i--){
                 trenutni = matrica[i][kolona];
                 matrica[i][kolona] = prethodni;
@@ -63,7 +63,7 @@ void rotiranjeMatrice(int m,int n,int matrica[SIZE][SIZE]){
             }
         }
         kolona++;
-    }
+}
 
 
 int main(){
