@@ -22,9 +22,8 @@ void unos(int m,int n,int matrica[SIZE][SIZE]){
 void ispis(int m,int n,int matrica[SIZE][SIZE]){
     for(int i = 0;i < m;i++){
         for(int j = 0;j < n;j++){
-            printf("%d ",matrica[i][j]);
+            printf("%d \n",matrica[i][j]);
         }
-        printf("\n");
     }
 }
 
