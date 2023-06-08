@@ -23,7 +23,6 @@ typedef struct student{
     int ukupanBrPoena;
 }STUDENT;
 
-
 int main(){
     int i = 0;
     bool jeLiPolozio = false;

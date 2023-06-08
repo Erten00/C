@@ -17,7 +17,6 @@ int main() {
     int DonjaVilica[MAX_ZUBA];
     int Pacijent, Zub;
     char Invervencija;
-
     // cita stanje.txt
     FILE *fp = fopen("stanje.txt", "r");
     fscanf(fp, "%d", &BrojPacijenata);
@@ -30,7 +29,6 @@ int main() {
         fscanf(fp, "%d", &DonjaVilica[i]);
     }
     fclose(fp);
-
     // cita intervencije iz intervencije.txt i osvezava stanje zuba
     fp = fopen("intervencije.txt", "r");
     while (fscanf(fp, "%d %d %c", &Pacijent, &Zub, &Invervencija)) 
@@ -62,16 +60,12 @@ int main() {
         else {
             printf("Nevažeća vrsta intervencije '%c'\n", Invervencija);
         }
-
     }
     fclose(fp);
-
     // Izvestaj
     for (int i = 1; i <= BrojPacijenata; i++) {
         int UkupnoZuba = 0, NemaZub = 0, KvarniZub = 0;
-
         for (int j = 0; j < MAX_ZUBA; j++) {
-
             int *Vilica = GornjaVilica;
             if (j >= MAX_ZUBA / 2) {
                 Vilica = DonjaVilica;
@@ -86,7 +80,6 @@ int main() {
             else if (status == 2) {
                 KvarniZub++;
             }
-
         }
         printf("Pacijent %d:\n", i);
         printf("Ukupno zuba: %d\n", UkupnoZuba);

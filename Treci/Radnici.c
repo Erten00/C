@@ -1,8 +1,8 @@
 /*
 data je datoteka radnici.txt koja sadrži podatke o radnicima u jednoj privatnoj klinici .
 svaki slog u datoteci sadrži sledeće podatke: ime  i prezime radnika, bruto plata, tip zanimanja (H- hirurg)
-(o- lekar opšte prakse), U- Urolog. formirati datoteku "plateHiruga.dat" koja će sadržati ime i prezime
-radnika i neto plate za svakog od njih .. Neto plata se dobija kada od bruto plate oduz7memo
+(o- lekar opšte prakse), U- Urolog. formirati datoteku "PlateHiruga.dat" koja će sadržati ime i prezime
+radnika i neto plate za svakog od njih .. Neto plata se dobija kada od bruto plate oduzmemo
 porez koji iznosi 20% i doprinose koji iznose 17% za hirurge, 15% za lekare opšte prakse i 10% za urologe.
 na standardnom izlazu ispisati podatke o hirurgu koji ima najveću neto platu . */
 #include <stdio.h>
@@ -21,16 +21,18 @@ typedef struct radnik{
 }RADNIK;
 
 int main(){
-    FILE *dat1, *dat2;
+    FILE *dat1 = fopen("radnici.txt", "r");
+    FILE *dat2 = fopen("plateradnika.txt", "w");
     float procenatPoreza = 20, procenat_doprinosa, ukupan_procenat, ph = 17, po=15, pu=10 ;
     float uph = procenatPoreza + ph;
     float upo = procenatPoreza + po;
     float upu = procenatPoreza + pu;
     RADNIK radnici[MAX], najveca_zarada;
     int i=0, j; 
-    if ((dat1 = fopen("radnici.txt", "r")) == NULL){
-        printf("Greška prilikom otvaranja datoteke radnici.txt");
-        exit(1);
+
+    if (dat1 == NULL || dat2 == NULL){
+        printf("Error opening input/output files.\n");
+        return 1;
     }
     najveca_zarada = radnici[0];
     while(1){
@@ -52,13 +54,11 @@ int main(){
         }
         i++;
     }
-    if ((dat2 = fopen("plateradnika.txt", "w")) == NULL){
-        printf("Greška prilikom otvaranja datoteke radnici.txt");
-        exit(1);
-    }
     for(j=0; j<i-1; j++){
         fprintf(dat2, "%s %s %f \n", radnici[j].ime, radnici[j].prezime, radnici[j].neto );
     }
-    printf("Najveću zaradu ima %s %s, njegova bruto zarada iznosti %f a neto %f, on je %c", najveca_zarada.ime, najveca_zarada.prezime, najveca_zarada.bruto, najveca_zarada.neto, najveca_zarada.zanimanje);
-    return 0;
+   printf("Najveću zaradu ima %s %s, njegova bruto zarada iznosti %f a neto %f, on je %c", najveca_zarada.ime, najveca_zarada.prezime, najveca_zarada.bruto, najveca_zarada.neto, najveca_zarada.zanimanje);
+   fclose(dat1);
+   fclose(dat2);
+   return 0;
 }
