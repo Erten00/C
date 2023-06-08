@@ -23,10 +23,10 @@ int isPerfect(int number) {
 }
 
 int main() {
-    int N;
+    int number;
     printf("Enter a number: ");
-    scanf("%d", &N);
-    if (isPerfect(N)) {
+    scanf("%d", &number);
+    if (isPerfect(number)) {
         printf("The number is perfect.\n");
     } else {
         printf("The number is not perfect.\n");
