@@ -20,7 +20,6 @@ int main(){
     int prostiBrojevi = 0;
     int temp = 0;
    
-    
     printf("Unesite sumu S:");
     scanf("%d",&S);
     printf("Unesite broj:");
@@ -36,7 +35,6 @@ int main(){
         }
     }
   
-   
     if(broj == 0 || broj == 1){
         zastava = true;
     }
@@ -53,6 +51,7 @@ int main(){
          if(zastava == true){
           printf("%d ",temp);
         }
+        
     for(i = 0;i < prostiBrojevi + 1; i++){
         if(zastava == true){
             if(niz[i] == 0){
@@ -62,32 +61,5 @@ int main(){
         }
     }
     printf("\nIma %d prostih brojeva",prostiBrojevi);
-
-
-    // for(i = 2;i < broj;i++){
-    //    if(broj % i == 0){
-    //     zastava = false;
-    //     break;
-    //    }
-    // }
-    
-    // if(zastava == true){
-    //     printf("%d je prost",broj);
-    // }
-    // else{
-    //     printf("%d nije prost",broj);
-    // }
-    // while(zastava == true && i < prostiBrojevi){
-    //     i = 2;
-    //     niz[i] = broj;
-    //     printf("%d,",niz[i]);
-    //     i++;
-    // }
-    
-   
-    
-    
-
-
     return 0;
 }
