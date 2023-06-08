@@ -18,12 +18,14 @@ int nzd_f(int a, int b){             // 1. funkcija za izračunavanje nzd-a
 	}
 	return s;							//6 funkcija vraća s
 }
+
 int nzs_f(int a, int b){               // 7 nzs je samo nzd pomnožen sa  brojevima koji su ostali nepodeljieni
 	int nzd = nzd_f(a, b);				//8 računa nzd
 	a /= nzd;							// 9 nalazi koliko je  a pri računananju nzd-a	
 	b /= nzd;							// isto i za  b 		
 	return nzd * a * b;					// množi sve to da bi dobio nzs
 }
+
 void main(){
 	int a, b, nzs, nzd;
 	printf("Unesite a, b: ");
