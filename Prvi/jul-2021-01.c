@@ -28,7 +28,8 @@ int main() {
     scanf("%d", &number);
     if (isPerfect(number)) {
         printf("The number is perfect.\n");
-    } else {
+    }
+    else {
         printf("The number is not perfect.\n");
     }
     return 0;
