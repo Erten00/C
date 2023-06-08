@@ -15,7 +15,7 @@
 
 typedef struct student {
     char ime[20]; 
-    char prezime[20]
+    char prezime[20];
     int predavanja;
     int kolokvijum;
     int ispit;
