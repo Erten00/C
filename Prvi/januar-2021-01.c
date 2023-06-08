@@ -3,44 +3,38 @@
 // broj čija je prva cifra veća od njegove poslednje cifre. Prikazati dobijenu sumu brojeva: Napomena: Nije dozvoljena
 // upotreba indeksiranih promenljivih. Korisnik pre unosa brojeva mora uneti broj N. Sumirati samo brojeve koji imaju N cifara
 
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int main(){
-    int suma = 0;
-    int n,i,j;
-    int k;
-    int broj = 0;
-    int duzinaBroja = 0;
-    printf("Koliko cete brojeva uneti:");
-    scanf("%d",&k);
-    int pomocniNiz[k];
-    printf("Unesite broj cifara:");
-    scanf("%d",&n);
-    printf("Unosite broj sa %d cifara",n);
-    
-    for(i = 0;i < k;i++){
-        for(j = 0;j < n;j++){
-        int temp;
-        printf("\nUnesite cifru:");
-        scanf("%d",&temp);
-        broj = broj * 10 + temp;
-        } 
-        pomocniNiz[i] = broj;
-    }
-    for(i = 0; i < k; i++){
-        duzinaBroja = 0;
-        for(j = 0; j < n; j++){
-            broj = broj / 10;
-            duzinaBroja++;
+int get_sum(int N) {
+    int num_sum = 0;
+    char number[10];
+
+    while (1) {
+        printf("Enter a whole positive N-digit number (or enter a number with first digit > last digit to stop): ");
+        scanf("%s", number);
+
+        if (number[0] > number[N - 1]) {
+            break;
+        }
+
+        if (strlen(number) == N) {
+            num_sum += atoi(number);
         }
     }
-    printf("Vasi brojevi su:\n");
-    for(i = 0;i < k;i++){
-        if(broj / duzinaBroja == 0){
-            printf("%d,",pomocniNiz[i]);
-        }
-    }
-   
-    return 0;
+
+    return num_sum;
 }
 
+int main() {
+    int N;
+
+    printf("Enter the value of N: ");
+    scanf("%d", &N);
+
+    int sum_result = get_sum(N);
+
+    printf("Sum of N-digit numbers: %d\n", sum_result);
+
+    return 0;
+}
