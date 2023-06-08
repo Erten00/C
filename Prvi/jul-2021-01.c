@@ -1,12 +1,11 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-
-
 // 1. Napisati program koji ispisuje poruku da li je uneti broj N savršen. 
 // Broj je savršen ako je zbir cifara na parnim pozicijama jednak zbiru cifara
 // na neparnim pozicijama. Primer: Broj 15345 je savršen jer je zbir 1+3+5-5+4
 // dok broj 12345 nije savršen jer 1+3+5/2+4.
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
 
 int obrnutiBroj(int broj){
     int obrnuti = 0;
