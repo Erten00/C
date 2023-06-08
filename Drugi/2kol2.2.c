@@ -21,7 +21,7 @@ int main(){
         for(j=0; j<n; j++){
             as = 0;
             s = 0;
-            t=0;
+            t = 0;
             if(i<m-1){
                 s += matrica[i+1][j];
                 t++;
