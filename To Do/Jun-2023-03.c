@@ -74,7 +74,7 @@ void distributeMandates(Stranka stranka[], int BrojStranaka) {
     }
 }
 
-void writeResultsToFile(Stranka stranka[], int numParties) {
+void writeResultsToFile(Stranka stranka[], int BrojStranaka) {
     FILE* file = fopen("results.txt", "w");
     if (file == NULL) {
         printf("Failed to open file for writing.\n");
@@ -82,7 +82,7 @@ void writeResultsToFile(Stranka stranka[], int numParties) {
     }
 
     // Write party information to the file
-    for (int i = 0; i < numParties; i++) {
+    for (int i = 0; i < BrojStranaka; i++) {
         fprintf(file, "%d, %s, %d\n", stranka[i].BrojStranke, stranka[i].ImeStranke, stranka[i].Mandati);
     } 
     fclose(file);
@@ -90,7 +90,7 @@ void writeResultsToFile(Stranka stranka[], int numParties) {
 
 int main() {
     Stranka stranka[MAX_Stranaka];
-    int numParties = 0;
+    int BrojStranaka = 0;
 
     FILE* file = fopen("input.txt", "r");
     if (file == NULL) {
@@ -98,28 +98,26 @@ int main() {
         return 1;
     }
 
-    // Read party information from the file
-    while (fscanf(file, "%d %d %c[^\n]", &stranka[numParties].BrojStranke,&stranka[numParties].Glasovi, stranka[numParties].ImeStranke) == 3) {
-        numParties++;
-        if (numParties == MAX_Stranaka) {
+    while (fscanf(file, "%d %d %c[^\n]", &stranka[BrojStranaka].BrojStranke,&stranka[BrojStranaka].Glasovi, stranka[BrojStranaka].ImeStranke) == 3) {
+        BrojStranaka++;
+        if (BrojStranaka == MAX_Stranaka) {
             printf("Maximum number of parties exceeded.\n");
             break;
         }
     }
-
     fclose(file);
 
     // Check if there are enough parties
-    if (numParties == 0) {
+    if (BrojStranaka == 0) {
         printf("No parties found in the input file.\n");
         return 1;
     }
 
     // Perform mandate distribution
-    distributeMandates(stranka, numParties);
+    distributeMandates(stranka, BrojStranaka);
 
     // Write results to output file
-    writeResultsToFile(stranka, numParties);
+    writeResultsToFile(stranka, BrojStranaka);
 
     printf("Mandate distribution completed. Results written to 'results.txt' file.\n");
 
