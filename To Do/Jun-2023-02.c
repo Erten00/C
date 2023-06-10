@@ -11,7 +11,7 @@ Učitavanje i proveru da li je matrica tridijagonalna realizovati kao zasebne po
 int isTridiagonal(int matrix[][100], int n) {
     int i, j;
     
-    // Check elements below the main diagonal
+    // Provera elemenata ispod glavne dijagonale
     for (i = 1; i < n; i++) {
         for (j = 0; j < i - 1; j++) {
             if (matrix[i][j] != 0) {
@@ -20,7 +20,7 @@ int isTridiagonal(int matrix[][100], int n) {
         }
     }
     
-    // Check elements above the main diagonal
+    // Provera elemenata iznad glavne dijagonale
     for (i = 0; i < n - 1; i++) {
         for (j = i + 2; j < n; j++) {
             if (matrix[i][j] != 0) {
@@ -28,11 +28,21 @@ int isTridiagonal(int matrix[][100], int n) {
             }
         }
     }
-    
     return 1; // Tridiagonal
 }
 
-
+void unos(int n,int matrica[100][100]){
+    int i
+    if (n > 3 && n < 100)
+    {
+    printf("Enter the elements of the matrix:\n");
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    }
+}
 
 int main() {
     int n, i, j;
@@ -41,22 +51,10 @@ int main() {
     printf("Enter the dimension of the matrix (3-%d): ", 100);
     scanf("%d", &n);
     
-    if (n < 3 || n > 100) {
-        printf("Invalid dimension. Please enter a valid dimension.\n");
-        return 1;
-    }
-    
-    printf("Enter the elements of the matrix:\n");
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
-            scanf("%d", &matrix[i][j]);
-        }
-    }
-    
     if (isTridiagonal(matrix, n)) {
-        printf("The matrix is tridiagonal.\n");
+        printf("Matrica je tijagonalna.\n");
     } else {
-        printf("The matrix is not tridiagonal.\n");
+        printf("Matrica nije tijagonalna.\n");
     }
     
     return 0;

@@ -27,7 +27,7 @@ typedef struct {
     int Mandati;
 } Stranka;
 
-void distributeMandates(Stranka stranka[], int BrojStranaka) {
+void PodelaMandata(Stranka stranka[], int BrojStranaka) {
     int UkupnoGalsova = 0;
     int i;
 
@@ -107,16 +107,8 @@ int main() {
     }
     fclose(file);
 
-    // Check if there are enough parties
-    if (BrojStranaka == 0) {
-        printf("No parties found in the input file.\n");
-        return 1;
-    }
+    PodelaMandata(stranka, BrojStranaka);
 
-    // Perform mandate distribution
-    distributeMandates(stranka, BrojStranaka);
-
-    // Write results to output file
     writeResultsToFile(stranka, BrojStranaka);
 
     printf("Mandate distribution completed. Results written to 'results.txt' file.\n");
