@@ -21,32 +21,32 @@ Nakon toga potrebno je u izlaznu tekstualnu datoteku ispisati informacije o stra
 #define MAX_NAME_LENGTH 31
 
 typedef struct {
-    int serialNumber;
-    int votes;
-    char name[MAX_NAME_LENGTH];
-    int mandates;
-} Party;
+    int BrojStranke;
+    int Glasovi;
+    char ImeStranke[MAX_NAME_LENGTH];
+    int Mandati;
+} Stranka;
 
-void distributeMandates(Party parties[], int numParties) {
+void distributeMandates(Stranka parties[], int numParties) {
     int totalVotes = 0;
     int i;
 
     // Calculate total number of votes
     for (i = 0; i < numParties; i++) {
-        totalVotes += parties[i].votes;
+        totalVotes += parties[i].Glasovi;
     }
 
     // Calculate mandates for each party
     for (i = 0; i < numParties; i++) {
-        parties[i].mandates = (parties[i].votes * 250) / totalVotes;
+        parties[i].Mandati = (parties[i].Glasovi * 250) / totalVotes;
     }
 
     // Sort parties based on mandates in descending order
     for (i = 0; i < numParties - 1; i++) {
         int j;
         for (j = 0; j < numParties - i - 1; j++) {
-            if (parties[j].mandates < parties[j + 1].mandates) {
-                Party temp = parties[j];
+            if (parties[j].Mandati < parties[j + 1].Mandati) {
+                Stranka temp = parties[j];
                 parties[j] = parties[j + 1];
                 parties[j + 1] = temp;
             }
@@ -61,7 +61,7 @@ void distributeMandates(Party parties[], int numParties) {
 
         // Find party with highest quotient
         for (i = 0; i < numParties; i++) {
-            int quotient = parties[i].votes / (parties[i].mandates + 1);
+            int quotient = parties[i].Glasovi / (parties[i].Mandati + 1);
             if (quotient > maxQuotient) {
                 maxQuotient = quotient;
                 maxQuotientIndex = i;
@@ -69,12 +69,12 @@ void distributeMandates(Party parties[], int numParties) {
         }
 
         // Assign next mandate to party with highest quotient
-        parties[maxQuotientIndex].mandates++;
+        parties[maxQuotientIndex].Mandati++;
         remainingMandates--;
     }
 }
 
-void writeResultsToFile(Party parties[], int numParties) {
+void writeResultsToFile(Stranka parties[], int numParties) {
     FILE* file = fopen("results.txt", "w");
     if (file == NULL) {
         printf("Failed to open file for writing.\n");
@@ -83,13 +83,13 @@ void writeResultsToFile(Party parties[], int numParties) {
 
     // Write party information to the file
     for (int i = 0; i < numParties; i++) {
-        fprintf(file, "%d, %s, %d\n", parties[i].serialNumber, parties[i].name, parties[i].mandates);
-    }
+        fprintf(file, "%d, %s, %d\n", parties[i].BrojStranke, parties[i].ImeStranke, parties[i].Mandati);
+    } 
     fclose(file);
 }
 
 int main() {
-    Party parties[MAX_PARTIES];
+    Stranka parties[MAX_PARTIES];
     int numParties = 0;
 
     FILE* file = fopen("input.txt", "r");
@@ -99,8 +99,7 @@ int main() {
     }
 
     // Read party information from the file
-    while (fscanf(file, "%d %d %[^\n]", &parties[numParties].serialNumber,
-                  &parties[numParties].votes, parties[numParties].name) == 3) {
+    while (fscanf(file, "%d %d %c[^\n]", &parties[numParties].BrojStranke,&parties[numParties].Glasovi, parties[numParties].ImeStranke) == 3) {
         numParties++;
         if (numParties == MAX_PARTIES) {
             printf("Maximum number of parties exceeded.\n");
