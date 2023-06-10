@@ -17,7 +17,7 @@ Nakon toga potrebno je u izlaznu tekstualnu datoteku ispisati informacije o stra
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_PARTIES 1000
+#define MAX_Stranaka 1000
 #define MAX_NAME_LENGTH 31
 
 typedef struct {
@@ -28,17 +28,17 @@ typedef struct {
 } Stranka;
 
 void distributeMandates(Stranka parties[], int numParties) {
-    int totalVotes = 0;
+    int UkupnoGalsova = 0;
     int i;
 
     // Calculate total number of votes
     for (i = 0; i < numParties; i++) {
-        totalVotes += parties[i].Glasovi;
+        UkupnoGalsova += parties[i].Glasovi;
     }
 
     // Calculate mandates for each party
     for (i = 0; i < numParties; i++) {
-        parties[i].Mandati = (parties[i].Glasovi * 250) / totalVotes;
+        parties[i].Mandati = (parties[i].Glasovi * 250) / UkupnoGalsova;
     }
 
     // Sort parties based on mandates in descending order
@@ -89,7 +89,7 @@ void writeResultsToFile(Stranka parties[], int numParties) {
 }
 
 int main() {
-    Stranka parties[MAX_PARTIES];
+    Stranka parties[MAX_Stranaka];
     int numParties = 0;
 
     FILE* file = fopen("input.txt", "r");
@@ -101,7 +101,7 @@ int main() {
     // Read party information from the file
     while (fscanf(file, "%d %d %c[^\n]", &parties[numParties].BrojStranke,&parties[numParties].Glasovi, parties[numParties].ImeStranke) == 3) {
         numParties++;
-        if (numParties == MAX_PARTIES) {
+        if (numParties == MAX_Stranaka) {
             printf("Maximum number of parties exceeded.\n");
             break;
         }
