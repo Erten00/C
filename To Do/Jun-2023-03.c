@@ -27,24 +27,24 @@ typedef struct {
     int Mandati;
 } Stranka;
 
-void distributeMandates(Stranka parties[], int numParties) {
+void distributeMandates(Stranka parties[], int BrojStranaka) {
     int UkupnoGalsova = 0;
     int i;
 
     // Calculate total number of votes
-    for (i = 0; i < numParties; i++) {
+    for (i = 0; i < BrojStranaka; i++) {
         UkupnoGalsova += parties[i].Glasovi;
     }
 
     // Calculate mandates for each party
-    for (i = 0; i < numParties; i++) {
+    for (i = 0; i < BrojStranaka; i++) {
         parties[i].Mandati = (parties[i].Glasovi * 250) / UkupnoGalsova;
     }
 
     // Sort parties based on mandates in descending order
-    for (i = 0; i < numParties - 1; i++) {
+    for (i = 0; i < BrojStranaka - 1; i++) {
         int j;
-        for (j = 0; j < numParties - i - 1; j++) {
+        for (j = 0; j < BrojStranaka - i - 1; j++) {
             if (parties[j].Mandati < parties[j + 1].Mandati) {
                 Stranka temp = parties[j];
                 parties[j] = parties[j + 1];
@@ -54,13 +54,13 @@ void distributeMandates(Stranka parties[], int numParties) {
     }
 
     // Distribute remaining mandates based on D'Ont system
-    int remainingMandates = 250 - numParties;
+    int remainingMandates = 250 - BrojStranaka;
     while (remainingMandates > 0) {
         int maxQuotient = -1;
         int maxQuotientIndex = -1;
 
         // Find party with highest quotient
-        for (i = 0; i < numParties; i++) {
+        for (i = 0; i < BrojStranaka; i++) {
             int quotient = parties[i].Glasovi / (parties[i].Mandati + 1);
             if (quotient > maxQuotient) {
                 maxQuotient = quotient;
