@@ -74,19 +74,6 @@ void PodelaMandata(Stranka stranka[], int BrojStranaka) {
     }
 }
 
-void writeResultsToFile(Stranka stranka[], int BrojStranaka) {
-    FILE* file = fopen("results.txt", "w");
-    if (file == NULL) {
-        printf("Failed to open file for writing.\n");
-        return;
-    }
-
-    // Write party information to the file
-    for (int i = 0; i < BrojStranaka; i++) {
-        fprintf(file, "%d, %s, %d\n", stranka[i].BrojStranke, stranka[i].ImeStranke, stranka[i].Mandati);
-    } 
-    fclose(file);
-}
 
 int main() {
     Stranka stranka[MAX_Stranaka];
@@ -109,7 +96,7 @@ int main() {
 
     PodelaMandata(stranka, BrojStranaka);
 
-    writeResultsToFile(stranka, BrojStranaka);
+    printf("%d, %s, %d\n", stranka[BrojStranaka].BrojStranke, stranka[BrojStranaka].ImeStranke, stranka[BrojStranaka].Mandati);
 
     printf("Mandate distribution completed. Results written to 'results.txt' file.\n");
 
