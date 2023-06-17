@@ -31,16 +31,15 @@ int isTridiagonal(int matrix[][100], int n) {
     return 1; // Tridiagonal
 }
 
-void unos(int n,int matrica[100][100]){
-    int i
-    if (n > 3 && n < 100)
-    {
-    printf("Enter the elements of the matrix:\n");
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
-            scanf("%d", &matrix[i][j]);
+void unos(int n, int matrica[100][100]) {
+    int i, j;.
+    if (n > 3 && n < 100) {
+        printf("Enter the elements of the matrix:\n");
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < n; j++) {
+                scanf("%d", &matrica[i][j]);
+            }
         }
-    }
     }
 }
 
