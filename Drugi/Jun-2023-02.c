@@ -32,7 +32,7 @@ int isTridiagonal(int matrix[][100], int n) {
 }
 
 void unos(int n, int matrica[100][100]) {
-    int i, j;.
+    int i, j;
     if (n > 3 && n < 100) {
         printf("Enter the elements of the matrix:\n");
         for (i = 0; i < n; i++) {
