@@ -20,8 +20,6 @@ int main(){
     if(a+b>c && a+c>b && c+b>a){
         printf("\nstranice mogu formirati trougao.  \n");
         gama = acos( (a*a+b*b-c*c) / (2*a*b) );
-
-        
     }
     return 0;
 }
