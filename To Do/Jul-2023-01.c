@@ -1,5 +1,5 @@
 /*
-Na programskom jeziku C napisati strukturni program kojim se na početku zadaje tražena suma S, 
+1. Na programskom jeziku C napisati strukturni program kojim se na početku zadaje tražena suma S, 
 a zatira se redomo unose isključivo četvorocifreni brojevi sve dok suma unešenih brojeva ne postane veca od zadate sume S.
 Sumirati samo one brojeve čije su sve cifre prosti brojevi. U toku rešavanja programa prikazati unete brojeve koji zadovoljavaju uslov i učestvuju u sumiranju .
 Na kraju prikazati izračunatu sumu.
