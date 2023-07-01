@@ -44,7 +44,6 @@ void updateQuantities(FILE *robafp, FILE *prometfp) {
 int main() {
     FILE *robafp, *prometfp;
     
-    // Open the files in binary mode for read and write
     robafp = fopen("ROBA.DAT", "rb+");
     prometfp = fopen("PROMET.DAT", "rb");
     
