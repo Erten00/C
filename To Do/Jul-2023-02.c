@@ -17,8 +17,9 @@ int main() {
     int n;
     double I;
     double Ik;
+    double rata;
+    double Anuitet;
 
-    // Get the loan amount, annual interest rate, and repayment term from the user
     printf("Unesite iznos kredita (K): ");
     scanf("%lf", &K);
     
@@ -30,18 +31,18 @@ int main() {
     
     I = K * p * ((n + 1.0) / 2.0);
 
-    Ik = K * (1.0 - ((k - 1.0) / n)) * p;
+    Ik = K * (1.0 - ((K - 1.0) / n)) * p;
     
-    printf("Totalni interes: %.2lf\n", I);
+    printf("Totalni intrest: %.2lf\n", I);
     
     printf("\nPlan otplate:\n");
     
-    double principal_payment = K / n;  // Calculate the equal value of principal payments
+    Anuitet = K / n;
     
     for (int k = 1; k <= n; k++) {
-        double installment = principal_payment + Ik; 
+        rata = Anuitet + Ik; 
         printf("Rata %d: Plaćanje glavnice: %.2lf, Intrest: %.2lf, Ukupna rata: %.2lf\n",
-               k, principal_payment, Ik, installment);
+               k, Anuitet, Ik, rata);
     }  
     return 0;
 }
