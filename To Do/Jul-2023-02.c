@@ -13,22 +13,35 @@ Vrednosti K, p, n, se unose sa tastature.
 #include <stdlib.h>
 
 int main() {
-    int K;
-    int p;
+    double K, p;
     int n;
-    int I;
-    int Ik;
-    printf("Unesite iznos kamate");
-    scanf("%d", &K);
-    printf("Unesite iznos kamate");
+    double I;
+    double Ik;
+
+    // Get the loan amount, annual interest rate, and repayment term from the user
+    printf("Unesite iznos kredita (K): ");
+    scanf("%lf", &K);
+    
+    printf("Unesite godišnju kamatnu stopu (p): ");
+    scanf("%lf", &p);
+    
+    printf("Unesite rok otplate u godinama (n): ");
     scanf("%d", &n);
-    printf("Unesite godisnju kamatnu stopu");
-    scanf("%d", &p);
+    
+    I = K * p * ((n + 1.0) / 2.0);
 
-
-
-
-
-
-
+    Ik = K * (1.0 - ((k - 1.0) / n)) * p;
+    
+    printf("Totalni interes: %.2lf\n", I);
+    
+    printf("\nPlan otplate:\n");
+    
+    double principal_payment = K / n;  // Calculate the equal value of principal payments
+    
+    for (int k = 1; k <= n; k++) {
+        double installment = principal_payment + Ik; 
+        printf("Rata %d: Plaćanje glavnice: %.2lf, Intrest: %.2lf, Ukupna rata: %.2lf\n",
+               k, principal_payment, Ik, installment);
+    }  
+    return 0;
 }
