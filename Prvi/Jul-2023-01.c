@@ -23,7 +23,7 @@ int isPrime(int number) {
 
 int main() {
     int S, sum = 0, number;
-    printf("Enter the required sum (S): ");
+    printf("Unesite zeljenu sumu (S): ");
     scanf("%d", &S);
     printf("Enter four-digit numbers:\n");
     while (sum <= S) {
