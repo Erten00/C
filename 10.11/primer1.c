@@ -6,6 +6,7 @@ int maksimum(int prvi, int drugi){
     return drugi;
 }
 
+
 int main(){
     int a, b, c ,d ;
     printf("unesite cetiri cela broja");
