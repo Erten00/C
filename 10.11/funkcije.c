@@ -3,6 +3,7 @@
 int sabiranje(int a, int b){
 return a+b;
 }
+
 int razlika(int a, int b){
 return a-b;
 }
